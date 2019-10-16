@@ -28,24 +28,34 @@
 	padding-bottom 20px
 	&__top-l,
 	&__top-r,
-	&__top-c
+	&__top-c,
+	&__col
 		display table-cell
 		vertical-align middle
 	&__top-r
 		text-align: right 
 	&__top-c
 		width 89px
-	&-center
+	&_center
 		width 800px
 		margin 0 auto
 		padding-top 78px
 		padding-bottom 130px
 		text-align center
 		background: url('../img/cow-2.png') no-repeat
-		&__text 
-			padding 0 140px
-			line-height 1.53
-			color $beige
+	&__title
+		.b-title-1
+			margin-bottom 25px
+	&__text 
+		padding 0 128px
+		font-size 17px
+		margin-bottom 29px
+		line-height 1.53
+		color $beige
+	&_bottom
+		background $black
+	&__col
+		width 450px
 	.b-contact
 		&_inline:last-child
 			padding-left 28px			
