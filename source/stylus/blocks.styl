@@ -152,30 +152,37 @@ footer
 			background: none
 	&__title_production
 		margin-bottom 18.5%
+
 .b-news
+	colsWrap(3,40,20)
+	margin-bottom 40px
+	&__col
+		&:nth-child(6)
+			~
+				.b-news
+					&__col
+						.b-news-card
+							&:after
+								border-bottom none
 	&__title
 		margin 30px 31px 0 18px
 	&-card
 		display inline-block
 		position relative
-		width 33%
-		padding 20px 20px
 		&:after
 			content ''
 			position absolute
-			width 91%
+			right 0
 			bottom 20px 
-			left 20px
+			left 0
 			border-bottom 1px solid $brown
-		&_bottom
-			&:after
-				border-bottom none
 	&-card__image
 		width 100%
 	&-card_other
 		width 50%
 		&:after
 			border none
+
 .l-container-decoration
 	position relative
 	&:after
@@ -210,12 +217,9 @@ footer
 	&_smaller
 		padding-top 31px
 .section-news
-	position relative
-	margin-bottom 140px
-	padding-bottom 59px
-	border-bottom 1px solid $brown
-.b-news-card-wrapper
-	margin -20px -20px
+	margin-bottom 120px
+
+
 .b-text
 	max-width 970px
 	padding 27px 22px 42px
@@ -243,12 +247,19 @@ footer
 			background $white
 			border 1px solid $brown
 .b-pagination
-	position absolute
-	margin 0 auto
-	left 37%
-	bottom -19px
-	padding 0 36px
+	display flex
+	width 100%
+	justify-content center
+	align-items center
+	text-align center
 	background $pearl
+	&:after, &:before
+		content ''
+		border-top 1px solid $brown
+		margin 0 30px 0 0
+		flex 1 0 20px
+	&:after
+		margin 0 0 0 30px
 	&__page
 		display inline-block
 		width 40px
@@ -285,21 +296,25 @@ footer
 .b-contacts
 	margin-bottom 37px
 .maps 
-	height: 100%;
-	width: 100%;
-	position:absolute;
-	top: 0;
-	left: 0;
-	z-index: 0;
-	background url('https://via.placeholder.com/1910x711')
+	height 710px
+	background-color forestgreen
+
+.b-contacts-wrapper
+	position absolute
+	top 0
+	left 0
+	bottom 0
+	right 0
+	padding-top 90px
+	pointer-events none
+
 .b-frame
 	width 545px
-	margin 90px 0
 	background $white
 	border 1px solid #f4f0e7
 	outline 10px solid $white
 	padding 50px 36px 63px
-	margin-left 13px
+	pointer-events all
 	&_production
 		width 295px
 		text-align center
