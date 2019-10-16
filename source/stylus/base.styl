@@ -1,0 +1,323 @@
+html
+	height 100%
+	font-size $rootFontSize, false
+	user-select auto
+
+body
+	font-family 'PT_Root_UI_Regular', sans-serif
+	font-size 15px
+	font-weight normal
+	font-style normal
+	font-stretch normal
+	line-height normal
+	letter-spacing normal
+	min-height 100%
+	position relative
+	-webkit-text-size-adjust 100%
+	-webkit-font-size-adjust 100%
+	display flex
+	flex-direction column
+	color $text_color
+	background $pearl
+	@media $max_sm
+		width 992px
+
+img
+	display block
+
+h1, h2, h3, h4, h5, .b-title-1, .b-title-2, .b-title-3, .b-title-4, .b-title-5
+	line-height 1.2
+	display block
+	font-weight 600
+	margin-bottom 47px
+	margin-top 48px
+	&:first-child
+		margin-top 0
+
+h1, .b-title-1
+	font-family 'Oswald-Medium'
+	font-size: 56px;
+	font-weight 500
+	font-style normal
+	font-stretch normal
+	line-height normal
+	letter-spacing normal
+	text-transform uppercase
+	line-height 45px
+	line-height 1.2
+	&_center
+		text-align center
+h2, .b-title-2
+	font-family 'Oswald-Medium'
+	font-size 42px
+	font-weight 500
+	display block
+	line-height 1.19
+	text-transform uppercase
+	&_roster
+		margin-bottom 27px
+	&_other
+		margin-bottom 45px
+	&_center
+		text-align center
+		position relative
+		margin 45px 0
+	&_line:after
+			position absolute
+			bottom -11px
+			left 0
+			right 0
+			margin 0 auto
+			content ''
+			width 99px
+			border 1px solid $green
+h3, .b-title-3
+	display block
+	font-family 'Oswald-Medium'
+	font-size 30px
+	font-weight 500
+	text-transform uppercase
+	line-height 1.19
+	&_inner
+		margin-bottom 20px
+h4, .b-title-4
+	font-family 'Oswald-Medium'
+	display block
+	font-family 'Oswald-Medium'
+	font-size 20px
+	font-weight 500
+	text-transform uppercase
+	line-height 1.19
+	&_inner
+		margin-bottom 26px
+h5, .b-title-5
+	font-family 'Oswald-Medium'
+	font-size 15px
+	font-weight 500
+
+p
+	// margin-bottom 48px
+	margin-bottom 20px
+	font-size: 17px
+	font-weight: normal
+	line-height: 1.53
+	color: #313f48
+	&:last-child
+		margin-bottom 0
+		
+.accent
+	display block
+	font-family 'Oswald-Regular'
+	font-size 20px
+	font-weight normal
+	font-style italic
+	line-height 1.5
+	text-transform uppercase
+	padding-bottom 54px
+	margin-bottom 51px
+	border-bottom 1px solid $brown
+
+ul, ol
+	list-style-position inside
+	margin-bottom 20px
+	&:last-child
+		margin-bottom 0
+// li
+// 	list-style none
+
+table
+	width 100%
+	border 1px solid #d3d3d3
+	border-collapse separate
+	overflow hidden
+	margin 27px 0
+	th, td
+		padding 14px 20px
+		border-bottom 1px solid #d3d3d3
+		border-right 1px solid #d3d3d3
+		line-height 20px
+		font-size 14px
+		vertical-align top
+		&:last-child
+			border-right 0
+	th
+		font-weight 500
+		font-size 16px
+		background-color #ebebeb
+		text-align left
+		&.small
+			width 580px
+	tr
+		&:last-child
+			td, td
+				border-bottom 0
+
+i
+	font-style italic
+
+b, strong
+	font-weight 600
+
+button
+	border 0
+
+a
+	cursor pointer
+	text-decoration none
+	color inherit
+a:hover
+	text-decoration underline
+
+._no-border, ._no-border *
+	border 0
+
+._img-left,
+._img-right
+	margin-bottom 14px
+
+._img-left
+	float left
+	margin-right 14px
+
+._img-right
+	float right
+	margin-left 14px
+
+.-text-center,
+.text-center
+	text-align center
+	
+.-text-right
+	text-align right
+
+.-text
+	> p
+		&:last-child
+			margin-bottom 0
+
+.fancybox-skin
+	box-shadow none !important
+	border-radius 0
+
+.fancybox-wrap
+	opacity 0
+.compensate-for-scrollbar
+	padding-right 17px
+
+.owl-carousel .owl-item
+	-webkit-transform translateZ(0)
+
+.swiper-container
+	.swiper-prev, .swiper-next
+		vAlign()
+	.swiper-prev
+		left 0
+	.swiper-next
+		right 0
+		
+.b-checkbox, .b-radiobox
+	&__input
+		position absolute
+		width 1px
+		height 1px
+		overflow hidden
+		clip rect(0 0 0 0)
+		&:checked
+			+
+				.b-checkbox, .b-radiobox
+					&__label
+						&:after
+							opacity 1
+						&:before
+							background-color #4286f4
+							border-color #4286f4
+	&__label
+		display block
+		position relative
+		padding-left 22px
+		cursor pointer
+		&:before, &:after
+			position absolute
+			
+.b-checkbox
+	&__label
+		&:before
+			content ''
+			width 15px
+			height 15px
+			border #adb5bd solid 1px
+			border-radius 2px
+			transition .25s background-color, .25s color
+		&:after
+			content '\2714'
+			height 15px
+			width 15px
+			line-height 15px
+			text-align center
+			opacity 0
+			color #fff
+			transition .25s opacity
+		&:before, &:after
+			left 0
+			vAlign()
+			
+.b-radiobox
+	&__label
+		&:before
+			content ''
+			width 15px
+			height 15px
+			border #adb5bd solid 1px
+			border-radius 50%
+			transition .25s background-color, .25s color
+		&:after
+			content ''
+			height 5px
+			width 5px
+			border-radius 50%
+			text-align center
+			opacity 0
+			background-color #fff
+			transition .25s opacity
+		&:before
+			left 0
+			vAlign()
+		&:after
+			top 6px
+			left 5px
+
+.-hidden-lg
+	@media $max_lg
+		display none
+.-hidden-md
+	@media $max_md
+		display none
+.-hidden-sm
+	@media $max_sm
+		display none
+.-hidden-xs
+	@media $max_xs
+		display none
+
+.-visible-lg
+	display none
+	@media $max_lg
+		display block
+.-visible-md
+	@media $max_md
+		display block
+	@media $min_lg
+		display none
+.-visible-sm
+	@media $max_sm
+		display block
+	@media $min_md
+		display none
+.-visible-xs
+	@media $max_xs
+		display block
+	@media $max_sm
+		display none
+
+.im-popup
+	opacity 0

@@ -1,0 +1,60 @@
+include ../../node_modules/bemto.pug/bemto
+include helpers/variables
+include helpers/mixins
+
+
+doctype html
+html
+    head
+        title Продукция
+        include inc/head
+    body(class="p-main")
+        include partials/header
+        .l-container
+            +b('').col
+                +e('').col-2._left
+                    +b('').animal._cow
+                        +e('').part._cow-1
+                            +b('').plus._cow-1
+                                +e('').bright +
+                        +e('').part._cow-2
+                            +b('').plus._cow-2
+                                +e('').bright +
+                        +e('').part._cow-3
+                            +b('').plus._cow-3
+                                +e('').bright +
+                        +e('').part._cow-4
+                            +b('').plus._cow-4
+                                +e('').bright +
+                        +e('').part._cow-5
+                            +b('').plus._cow-5
+                                +e('').bright +
+                +e('').col-2._right
+                    +b('').heading._production
+                        +e('').title._production
+                            span.b-title-1 
+                                span.italic Наша 
+                                | говядина
+                        +e('p').text Здесь будет пояснительный текст про то, что нужно навести на плюсик, чтобы посмотреть информацию о виде мяса и блюдах, которые можно из него приготовить. 
+            +b('span').title-2._center._line только качественное и свежее мясо
+            +b('').text._center
+                p Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. 
+                br
+                p За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
+            +b('span').title-2._center Другие виды мяса
+            +b('').production-wrapper
+                +b('a')(href='#').frame._production
+                    +e('img').image(src="../img/chicken.png", alt="chicken")
+                    +e('span').title.b-title-4 курятина
+                    +e('span').text Грудка, голень, крылышки, бедра, филе, тушка и прочее 
+                +b('a')(href='#').frame._production
+                    +e('img').image(src="../img/pig.png", alt="pig")
+                    +e('span').title.b-title-4 свинина
+                    +e('span').text Окорок, корейка, грудинка, рулька, голяшка и прочее 
+                +b('a')(href='#').frame._production
+                    +e('img').image(src="../img/sheep.png", alt="sheep")
+                    +e('span').title.b-title-4 баранина
+                    +e('span').text Седло, корейка, грудинка, лопатка, пашинка, рулька и прочее 
+        include partials/footer-second
+        include inc/vendor-scripts
+        script(src="js/client.min.js")      

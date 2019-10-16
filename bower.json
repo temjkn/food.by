@@ -1,0 +1,23 @@
+{
+  "name": "blank-project-website",
+  "description": "blank project for codding",
+  "main": "index.js",
+  "license": "BSD-2-Clause",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.2.4",
+    "jquery-ui": "https://github.com/components/jqueryui.git",
+    "normalize": "./source/stylus/vendor-css/normalize.css",
+    "js-helpers": "https://github.com/aivenreach/js-helpers.git",
+	"jquery-cookie": "^1.4.1",
+	"jquery-form": "^4.2.2"
+  }
+}

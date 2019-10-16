@@ -1,0 +1,445 @@
+.l-footer
+	width 100%
+	margin-top auto
+	margin-bottom 0
+.footer-wrapper
+	border-top 1px solid $beige
+	margin-top 126px
+	padding-top 74px
+footer 
+	padding-top 74px
+	padding-bottom 120px
+.b-footer
+	display table 
+	table-layout fixed
+	width 100%
+	&__column
+		display table-cell
+		vertical-align top
+		&_logo
+			width 89px
+		&_nav
+			width 314px
+		&_contacts
+			width 259px
+	&__contact-row
+		margin-bottom 24px
+		&:last-child
+			margin-bottom 0			
+.b-footer-nav
+	&__item
+		margin-bottom 20px
+		&:last-child
+			margin-bottom 0
+	&__title
+		text-transform uppercase
+		font-family 'Oswald-Medium'
+		font-size 15px
+		font-weight 500
+		text-decoration none
+		@media $working_hover
+			&:hover
+				color $green
+				text-decoration none
+		&_act
+			color $green
+			text-decoration none
+			
+			
+.b-footer-text
+	padding 0 59px
+	&__item
+		font-size 14px
+		color $light_beige
+		line-height normal
+		margin-bottom 20px
+		&:last-child
+			margin-bottom 0
+		p
+			font-size 14px
+			color $light_beige
+			line-height normal
+			
+		
+
+.b-footer-contact
+	margin-bottom 17px
+	&__title
+		display block
+		font-size 14px
+		color $light_beige
+		margin-bottom 4px
+	&__value
+		text-transform uppercase
+		font-size 17px
+		font-weight bold
+		display inline-block
+		&_email
+			color $green
+			margin-bottom 17px
+.b-title-inner
+	width 88.5%
+	margin 48px auto 0
+	padding-bottom 4px
+	background $pearl
+	position relative	
+.button,
+.b-button
+	background $green
+	color $white
+	padding 12px 20px
+	border-radius 4px
+	font-size 17px
+	font-weight bold
+	border 1px solid $green
+	display inline-block
+	text-decoration none
+	&:hover
+		background $white
+		color $black
+		text-decoration none
+		border 1px solid $green
+		text-decoration none
+	&_small
+		padding 9px 17px
+		font-size 14px
+	&-wrapper
+		padding-top 34px
+	&_transparent
+		background $white
+		color $black
+		padding 9px 17px
+		font-size 14px
+		font-weight bold
+		&:hover
+			background $green
+			color $white
+	&-wrapper_top
+		text-align center
+		padding-top 60px
+	&_roster
+		padding 17px 33px
+.italic
+	font-family Caveatregular
+	font-size 70px
+	letter-spacing -2.8px
+	line-height 74px
+	color $green
+	display block
+	text-transform none
+.b-heading
+	display flex
+	align-items center
+	position relative
+	margin-top 126px
+	margin-bottom 23px
+	justify-content space-between
+	&:before
+		position absolute
+		top 8px
+		right 0
+		content ''
+		height 130px
+		width 510px
+		background url(../img/knifes.png) no-repeat
+		opacity 0.4	
+	&__text
+		max-width 979px
+	&_production
+		margin 0
+		display block
+		&:before
+			background: none
+	&__title_production
+		margin-bottom 18.5%
+.b-news
+	&__title
+		margin 30px 31px 0 18px
+	&-card
+		display inline-block
+		position relative
+		width 33%
+		padding 20px 20px
+		&:after
+			content ''
+			position absolute
+			width 91%
+			bottom 20px 
+			left 20px
+			border-bottom 1px solid $brown
+	&-card__image
+		width 100%
+	&-card_other
+		width 50%
+		&:after
+			border none
+.l-container-decoration
+	position relative
+	&:after
+		position absolute
+		top 119px
+		content ''
+		width 100%
+		border-bottom 1px solid $beige
+.b-section
+	background $white
+	padding 53px 115px 12px 114px
+	position relative
+	width 100%
+	margin 0 auto
+	&__title
+		display block
+		font-family 'Oswald-Regular'
+		font-size 20px
+		font-weight normal
+		font-style italic
+		line-height 1.5
+		text-transform uppercase
+		padding-bottom 54px
+		margin-bottom 51px
+		border-bottom 1px solid $brown
+	&_narrow		
+		width 88.5%
+		margin-bottom -79px
+		padding-bottom 29px
+.b-inner
+	padding-top 22px
+	&_smaller
+		padding-top 31px
+.section-news
+	position relative
+	margin-bottom 140px
+	padding-bottom 59px
+	border-bottom 1px solid $brown
+.news-wrapper
+	margin -20px -20px
+.b-text
+	max-width 970px
+	padding 27px 22px 42px
+	&_center
+		text-align center
+	&__title
+		text-transform uppercase
+		line-height 1.5
+		margin-bottom 11px
+	&__description
+		font-size 14px
+		color $grey
+		line-height normal
+		padding-top 5px
+		margin-bottom 23px
+	&__more
+		background $brown
+		color $white
+		font-size 15px
+		border 1px solid $brown
+		padding-left 27px
+		padding-right 27px
+		&:hover
+			color $brown
+			background $white
+			border 1px solid $brown
+.b-pagination
+	position absolute
+	margin 0 auto
+	left 37%
+	bottom -19px
+	padding 0 36px
+	background $pearl
+	&__page
+		display inline-block
+		width 40px
+		height 40px
+		font-size 14px
+		font-weight bold
+		margin-right 8px
+		padding 0
+		line-height 40px
+		text-align center
+		&:last-child
+			padding-right 0
+		&_active
+			background $black
+			color $white
+			border 1px solid $black
+		&_hidden
+			border solid 1px $brown
+			opacity .7
+.b-substrate
+	margin -193px 0 -40px
+	background #ede2d9
+	&__image
+		width 100%
+.b-other-news
+	margin-top 8.4%
+	padding-top 69px
+	border-top 1px solid $brown
+	&__wrapper
+		margin -10px -20px
+		font-size 0
+.roster
+	position: relative
+.b-contacts
+	margin-bottom 37px
+.maps 
+	height: 100%;
+	width: 100%;
+	position:absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	background url('https://via.placeholder.com/1910x711')
+.b-frame
+	width 545px
+	margin 90px 0
+	background $white
+	border 1px solid #f4f0e7
+	outline 10px solid $white
+	padding 50px 36px 63px
+	margin-left 13px
+	&_production
+		width 295px
+		text-align center
+		padding-bottom 40px
+		margin-bottom 20px
+		z-index 2
+	&__image
+		margin 0 auto
+	&__text
+		display block
+		font-size 14px
+		color $grey
+	&__title
+		padding-top 56px
+		position relative
+		&:before
+			position absolute
+			top 28px
+			left 0
+			right 0
+			margin 0 auto
+			content ''
+			width 99px
+			border 1px solid $green
+.b-col
+	display table
+	width 100%
+	table-layout fixed
+	padding-top 120px
+	margin-bottom: 5.1%
+	&__col-2 
+		display table-cell
+		vertical-align top
+	&__col-2_left
+		width 70%
+		position relative
+.animal
+	width 100%
+	margin-left -52px
+.b-production-wrapper
+	width 80%
+	margin 0 auto
+	margin-top -50px
+	display flex 
+	flex-wrap wrap
+	justify-content space-between
+	margin-bottom -100px
+.b-animal
+	width 100%
+	height 100%
+	position relative
+	&_cow
+		width 824px
+		height 451px
+		background url(../img/cow-unactive-parts.png) no-repeat
+	&__part
+		position absolute
+		&_cow-1
+			width 113px 
+			height 165px
+			top 114px
+			left 376px
+			background url(../img/cow-active-part-1.png) no-repeat
+			border-top-right-radius 51px
+			border-top-left-radius 49px
+			border-bottom-right-radius 66px
+			border-bottom-left-radius 8px
+		&_cow-2
+			width 84px 
+			height 106px
+			top 63px
+			left 452px
+			background url(../img/cow-active-part-2.png) no-repeat
+			border-top-right-radius 51px
+			border-top-left-radius 49px
+			border-bottom-right-radius 64px
+			border-bottom-left-radius 86px
+		&_cow-3
+			width 116px 
+			height 27px
+			top 132px
+			right 177px
+			z-index 2
+			background url(../img/cow-active-part-3.png) no-repeat
+			border-top-right-radius 1px
+			border-top-left-radius 9px
+			border-bottom-right-radius 29px
+			border-bottom-left-radius 6px			
+			&:hover
+				background url(../img/cow-part-3.png) no-repeat
+		&_cow-4
+			width 122px 
+			height 114px
+			top 70px
+			right 182px
+			background url(../img/cow-active-part-4.png) no-repeat
+			border-top-right-radius 0px
+			border-top-left-radius 37px
+			border-bottom-right-radius 32px
+			border-bottom-left-radius 17px
+		&_cow-5
+			width 166px 
+			height 111px
+			top 64px
+			right 40px
+			background url(../img/cow-active-part-5.png) no-repeat
+			border-top-right-radius 37px
+			border-top-left-radius 50px
+			border-bottom-right-radius 126px
+			border-bottom-left-radius 10px
+.b-plus
+	text-align center
+	display table-cell
+	vertical-align middle
+	position absolute
+	width 48px
+	height 48px
+	border-radius 40px
+	background rgba(0, 154, 36, .2)
+	padding-top 8px
+	cursor pointer
+	&__bright
+		width 32px
+		height 32px
+		border-radius 30px
+		background $green
+		margin 0 auto
+		line-height 32px
+		color $beige
+		font-weight bold
+		font-size 25px
+	&_cow-1
+		top 51px
+		left 40px
+	&_cow-2
+		top -8px
+		left 14px
+	&_cow-3
+		top -11px
+		left 36px
+	&_cow-4
+		top -8px
+		left 41px
+	&_cow-5
+		top -12px
+		left 68px
