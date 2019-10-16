@@ -8,9 +8,10 @@ html
     head
         title Новость
         include inc/head
-    body(class="p-main")
+    body(class="p-about_news")
         include partials/header
         .l-container
+            +b('').news-wrapper
                 +b('').button-wrapper._top
                         +b('a')(href='#').button._transparent Назад к новостям
                 +b('').title-inner
