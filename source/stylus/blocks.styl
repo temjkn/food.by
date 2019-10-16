@@ -43,9 +43,7 @@ footer
 				text-decoration none
 		&_act
 			color $green
-			text-decoration none
-			
-			
+			text-decoration none			
 .b-footer-text
 	padding 0 59px
 	&__item
@@ -59,9 +57,6 @@ footer
 			font-size 14px
 			color $light_beige
 			line-height normal
-			
-		
-
 .b-footer-contact
 	margin-bottom 17px
 	&__title
@@ -127,11 +122,12 @@ footer
 	color $green
 	display block
 	text-transform none
+.b-news-wrapper
+	padding-top 126px
 .b-heading
 	display flex
 	align-items center
 	position relative
-	margin-top 126px
 	margin-bottom 23px
 	justify-content space-between
 	&:before
@@ -167,6 +163,9 @@ footer
 			bottom 20px 
 			left 20px
 			border-bottom 1px solid $brown
+		&_bottom
+			&:after
+				border-bottom none
 	&-card__image
 		width 100%
 	&-card_other
@@ -211,7 +210,7 @@ footer
 	margin-bottom 140px
 	padding-bottom 59px
 	border-bottom 1px solid $brown
-.news-wrapper
+.b-news-card-wrapper
 	margin -20px -20px
 .b-text
 	max-width 970px
