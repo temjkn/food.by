@@ -10,6 +10,17 @@ html
 		include inc/head
 	body(class="p-main")
 		include partials/header-main
+		.l-container
+			+b().main-wrapper
+				+b('').description-wrapper
+					+b('').description
+						span.b-title-1 
+							span.italic Наше 
+							| производство
+						+e('p').text ООО «ФорТорг» — предприятие мясоперерабатывающей отрасли Республики Беларусь. Производство находится в Минском районе. Наше предприятие аттестовано на Российскую Федерацию. 
+						+e('p').text._last Мы работаем с исключительно качественным сырьем которое приобретаем нааттестованных мясокомбинатах и фермерских хозяйствах Республики Беларусь. Предприятие находится в экономически выгодной зоне, что ведет к значительному снижению себестоимости товара. 
+						+b('a').button._big(href='#') Узнать больше
+						//- +e('img').image(src="https://via.placeholder.com/902x722", alt="")
 		include partials/footer
 		include inc/vendor-scripts
 		script(src="js/client.min.js")
