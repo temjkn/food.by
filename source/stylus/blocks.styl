@@ -74,6 +74,7 @@ footer
 			margin-bottom 17px
 .b-title-inner
 	width 88.5%
+	height 252px
 	margin 48px auto 0
 	padding-bottom 4px
 	background $pearl
@@ -169,6 +170,7 @@ footer
 	&-card
 		display inline-block
 		position relative
+		vertical-align top
 		&:after
 			content ''
 			position absolute
@@ -180,6 +182,7 @@ footer
 		width 100%
 	&-card_other
 		width 50%
+		padding 0 20px
 		&:after
 			border none
 
@@ -227,9 +230,13 @@ footer
 		text-align center
 	&__title
 		text-transform uppercase
+		overflow hidden
+		height 90px
 		line-height 1.5
 		margin-bottom 11px
 	&__description
+		height 75px
+		overflow hidden
 		font-size 14px
 		color $grey
 		line-height normal
@@ -276,6 +283,9 @@ footer
 			background $black
 			color $white
 			border 1px solid $black
+			&:hover
+				background $black
+				border 1px solid $black
 		&_hidden
 			border solid 1px $brown
 			opacity .7
@@ -463,3 +473,5 @@ footer
 	margin-bottom -79px
 .p-text .b-section
 	width 1190px
+.p-contacts .b-contact_column .b-contact__text:hover
+	text-decoration none
