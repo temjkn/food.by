@@ -41,7 +41,23 @@
 	.b-contact
 		&_inline:last-child
 			padding-left 28px
-
+	&_center
+		width 800px
+		height 442px
+		margin 80px auto 39px
+		text-align center
+		background url(../img/cow-2.png) no-repeat
+		padding-top 79px
+		.b-title-1
+			margin-bottom 20px
+	&__text
+		padding 0 130px
+		font-size 17px
+		line-height 1.53
+		margin-bottom 33px
+	&_bottom
+		background $black
+		margin-bottom 30px
 .b-contact
 	&__title
 		display block
@@ -55,8 +71,8 @@
 		display inline-block
 		&_email
 			color $green
-	&__value:first-child
-		margin-right 3px
+		&:nth-child(2)
+			margin-right 3px
 	&_column
 		margin-bottom 20px
 	&_inline
@@ -110,3 +126,19 @@
 			background $beige
 			color $black
 			text-decoration none
+.b-cell
+	display inline-block
+	width 33%
+	border-left 1px solid #40484b
+	padding 20px 0 15px 40px
+	&:first-child
+		border none
+	&__image,
+	&__text
+		display inline-block
+	&__text
+		position absolute
+		font-size 17px
+		font-weight bold
+		color $beige
+		margin-left 13px
