@@ -23,6 +23,7 @@
 .l-header,footer
 	background-color $black
 	color $beige
+
 .b-header
 	display table
 	table-layout fixed
@@ -55,6 +56,8 @@
 		font-size 17px
 		line-height 1.53
 		margin-bottom 33px
+		p
+			color #fcf0e2
 	&_bottom
 		background $black
 		margin-bottom 30px
@@ -142,3 +145,15 @@
 		font-weight bold
 		color $beige
 		margin-left 13px
+
+.p-main
+	.section-news
+		margin-top 85px
+		margin-bottom 80px
+		.b-heading
+			align-items flex-end
+			&:before
+				right 50%
+				transform translateX(50%)
+			.b-button
+				margin-bottom 8px

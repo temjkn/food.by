@@ -10,18 +10,104 @@ html
 		include inc/head
 	body(class="p-main")
 		include partials/header-main
-		.l-container
-			img.image(src="https://via.placeholder.com/902x722", alt="")
-			+b().main-wrapper
-				+b('').description-wrapper
+		+b().our-products
+			+e('').wrap
+				+e('')(style="background-image: url(https://via.placeholder.com/902x722)").bg
+				.l-container
 					+b('').description
-						span.b-title-1 
-							span.italic Наше 
+						span.b-title-1
+							span.italic Наше
 							| производство
-						+e('p').text ООО «ФорТорг» — предприятие мясоперерабатывающей отрасли Республики Беларусь. Производство находится в Минском районе. Наше предприятие аттестовано на Российскую Федерацию. 
-						+e('p').text._last Мы работаем с исключительно качественным сырьем которое приобретаем нааттестованных мясокомбинатах и фермерских хозяйствах Республики Беларусь. Предприятие находится в экономически выгодной зоне, что ведет к значительному снижению себестоимости товара. 
+						+e('p').text ООО «ФорТорг» — предприятие мясоперерабатывающей отрасли Республики Беларусь. Производство находится в Минском районе. Наше предприятие аттестовано на Российскую Федерацию.
+						+e('p').text._last Мы работаем с исключительно качественным сырьем которое приобретаем нааттестованных мясокомбинатах и фермерских хозяйствах Республики Беларусь. Предприятие находится в экономически выгодной зоне, что ведет к значительному снижению себестоимости товара.
 						+b('a').button._big(href='#') Узнать больше
-						//- +e('img').image(src="https://via.placeholder.com/902x722", alt="")
+		+b('').fresh-meat
+			.l-container
+				+e('').table-wrap
+					+e('').left
+						+e('img')(src="../img/fresh-meat.png").img
+					+e('').right
+						.b-title-2 только качественное и свежее мясо
+						+e('').text
+							p Экологически чистое место является неотъемлемой частью качества нашей продукции, а лучшие специалисты выполняют быструю и качественную обвалку по ГОСТу.
+							p В день наше предприятие на данный момент перерабатывает до 5 тонн готовой продукции.
+		+b('').our-production
+			.l-container
+				+b('').heading
+					+e('').title
+						span.b-title-1
+							span.italic Наша
+							| Продукция
+					+b('a').button._big(href='#') Перейти в раздел
+				+b('').production-wrapper_main
+					+b('a')(href='#').frame._production
+						+e('img').image(src="https://via.placeholder.com/250x220", alt="chicken")
+						+e('span').title.b-title-4 курятина
+						+e('span').text Грудка, голень, крылышки, бедра, филе, тушка и прочее
+					+b('a')(href='#').frame._production
+						+e('img').image(src="https://via.placeholder.com/250x220", alt="pig")
+						+e('span').title.b-title-4 свинина
+						+e('span').text Окорок, корейка, грудинка, рулька, голяшка и прочее
+					+b('a')(href='#').frame._production
+						+e('img').image(src="https://via.placeholder.com/250x220", alt="sheep")
+						+e('span').title.b-title-4 баранина
+						+e('span').text Седло, корейка, грудинка, лопатка, пашинка, рулька и прочее
+					+b('a')(href='#').frame._production
+						+e('img').image(src="https://via.placeholder.com/250x220")
+						+e('span').title.b-title-4 Говядина
+						+e('span').text Седло, корейка, грудинка, лопатка, пашинка, рулька и прочее
+			+e('').wrap
+				.l-container
+					+e('').text-wrap
+						.b-title-1
+							span.italic Приглашаем к
+							| сотрудничеству
+						+e('').text
+							p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+							p Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.
+						+b('a').button._big(href='#') Условия сотрудничества
+
+		.l-container
+			section.section-news
+				+b('').heading
+					+e('').title
+						span.b-title-1
+							span.italic Новости
+							| компании
+					+b('a').button._big(href='#') Больше новостей
+				+b('').news
+					+e('').cols-wrap
+						-for (var i = 0; i < 3; i++)
+							+e('').col
+								+b('').news-card
+									+e('img').image(src="https://via.placeholder.com/423x264", alt="")
+									+b('').text
+										.b-title-4 «ФорТорг» увеличил производство высококачественной говядины в первом полугодии 2019 года на 34%
+										+e('p').description «ФорТорг» реализует долгосрочную стратегию по увеличению производства отечественного мяса высокого качества. Агрохолдинг построил с нуля крупнейшее в Европе вертикально интегрированное производство «от...
+										+e('a').more.button(href='#') Читать полностью
+
+
+		section.roster
+			.maps
+			.b-contacts-wrapper
+				.l-container
+					+b('').frame_right
+							+b('').contacts
+									+b('span').title-2._roster Контакты
+									+b('').contact._column
+											+e('span').title._column._roster Наш адрес
+											+e('p').text 220038, Республика Беларусь, Минская обл., Минский р-н, Боровлянский с-с, 82 (район д. Лесновка)
+									+b('').contact._column
+											+e('span').title._column._roster Телефон/факс
+											+e('a').text(href="tel:+375172652094") +37517 265 20 94
+									+b('').contact._column
+											+e('span').title._column._roster Мобильный телефон
+											+e('a').text(href="tel:+375296896232") +37529 689 62 32;
+											+e('a').text(href="tel:+375447106081") +37544 710 60 81
+									+b('').contact._column
+											+e('span').title._column._roster Электронная почта
+											+e('a').value._email(href="#") info@fortorg.by
+							+b('a').button._roster(href='#') Напишите нам
 		include partials/footer
 		include inc/vendor-scripts
 		script(src="js/client.min.js")

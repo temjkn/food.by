@@ -133,7 +133,7 @@ footer
 	display flex
 	align-items center
 	position relative
-	margin-bottom 23px
+	margin-bottom 70px
 	justify-content space-between
 	&:before
 		position absolute
@@ -153,17 +153,19 @@ footer
 			background: none
 	&__title_production
 		margin-bottom 18.5%
+	.b-title-1
+		margin-bottom 0
 
 .b-news
 	colsWrap(3,40,20)
 	margin-bottom 40px
 	&__col
-		&:nth-child(6)
-			~.b-news
-				&__col
-					.b-news-card
-						&:after
-							border-bottom none
+		&:last-child
+			.b-news-card
+				&:after
+					left -1000px
+					pointer-events none
+					border-color #f9f7f3
 	&__title
 		margin 30px 31px 0 18px
 	&-card
@@ -180,6 +182,14 @@ footer
 		&_no-border
 			&:after
 				border-bottom none
+		.b-title-4
+			text-transform uppercase
+			overflow hidden
+			height 90px
+			line-height 1.5
+			margin-bottom 11px
+			max-height 90px
+			overflow hidden
 	&-card__image
 		width 100%
 	&-card_other
@@ -317,6 +327,7 @@ footer
 	right 0
 	padding-top 90px
 	pointer-events none
+
 .b-frame
 	width 545px
 	background $white
@@ -324,12 +335,26 @@ footer
 	outline 10px solid $white
 	padding 50px 36px 63px
 	pointer-events all
+	&:hover
+		outline 10px solid $white
+	&_right
+		margin-left auto
 	&_production
 		width 295px
 		text-align center
 		padding-bottom 40px
 		margin-bottom 20px
 		z-index 2
+		.b-frame
+			&__image
+				width 100%
+				height auto
+			&__title
+				margin-top 0
+				padding-top 66px
+				margin-bottom 10px
+				&:before
+					top 37px
 	&__image
 		margin 0 auto
 	&__text
@@ -363,6 +388,7 @@ footer
 .animal
 	width 100%
 	margin-left -52px
+
 .b-production-wrapper
 	width 80%
 	margin 0 auto
@@ -371,6 +397,17 @@ footer
 	flex-wrap wrap
 	justify-content space-between
 	margin-bottom -100px
+	&_main
+		width auto
+		justify-content left
+		margin 0 -15px
+		font-size 0
+		overflow hidden
+		padding 10px 0
+		.b-frame
+			width calc(25% - 50px)
+			margin 0 25px
+
 .b-animal
 	width 100%
 	height 100%
@@ -482,27 +519,101 @@ footer
 	font-weight normal
 	color rgba(252, 240, 226, 0.5)
 	display block
-.b-main-wrapper
+
+.b-our-products
 	padding-top 120px
-.b-description-wrapper
-	background url(../img/cow.png) no-repeat
-	background-position center bottom
-	position relative
-	padding-bottom 100px
 	margin-bottom 120px
+	&__wrap
+		position relative
+		padding-bottom 100px
+		background url(../img/prod-cow.png) no-repeat
+		background-position center bottom
+		position relative
+	&__bg
+		position absolute
+		top 0
+		right 0
+		left calc(50% + 50px)
+		bottom 0
+		background-size cover
+
+
+
 .b-description
 	padding-top 84px
+	width 50%
+	padding-right 50px
 	.b-title-1
 		margin-bottom 58px
 	&__text
 		display block
+		p
+			margin-bottom 26px
+			&:last-child
+				margin-bottom 72px
+
+.b-fresh-meat
+	overflow hidden
+	padding 100px 0 110px
+	margin-top -100px
+	margin-bottom 45px
+	&__table-wrap
+		display table
+		table-layout fixed
+		width 100%
+		border-collapse collapse
+	&__left,&__right
+		display table-cell
+		vertical-align middle
+		border solid 5px #ebe6db
+	&__left
+		position relative
+		width 329px
+	&__right
+		padding 52px 59px
+	&__img
+		position absolute
+		top -104px
+		left -84px
+		z-index -1
+	.b-title-2
+		color $brown
+		margin-bottom 25px
+	p
+		color $brown
+		margin-bottom 0
+
+.b-our-production
+	.b-heading
+		align-items flex-end
+		&:before
+			right 50%
+			transform translateX(50%)
+			content none
+		.b-button
+			margin-bottom 8px
+	&__wrap
+		background url(../img/pic-partnership-main.jpg)
+		background-size cover
+		padding 225px 0 180px
+		background-position right -200px center
+		@media $min_1500
+			background-position right center
+	&__text-wrap
 		width 50%
-		margin-bottom 26px
-		&_last
-			margin-bottom 72px
-.p-main .l-container
-	position static
-.image 
-	position absolute 
-	margin-top 120px
-	right 0
+		margin-left auto
+		p
+			color white
+			margin-bottom 30px
+			&:last-child
+				margin-bottom 70px
+		.b-title-1
+			color white
+			margin-bottom 60px
+	&__text
+		max-width 542px
+	.l-container
+		+
+			.b-our-production
+				&__wrap
+					margin-top -80px
