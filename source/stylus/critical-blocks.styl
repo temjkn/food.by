@@ -39,6 +39,10 @@
 		text-align: right
 	&__top-c
 		width 89px
+		@media $max_sm
+			width 63px
+			img 
+				width 100%
 	.b-contact
 		&_inline:last-child
 			padding-left 28px
@@ -61,7 +65,14 @@
 	&_bottom
 		background $black
 		margin-bottom 30px
+		@media $max_sm
+			display block
+			width auto
+			margin 100px 30px -208px
+			padding 10px 40px
 .b-contact
+	@media $max_sm
+		display none
 	&__title
 		display block
 		font-size 14px
@@ -129,6 +140,8 @@
 			background $beige
 			color $black
 			text-decoration none
+	@media $max_sm
+		display none
 .b-cell
 	display inline-block
 	width 33%
@@ -145,7 +158,19 @@
 		font-weight bold
 		color $beige
 		margin-left 13px
-
+		@media $max_sm
+			min-width 210px
+			position relative
+			text-align left
+	@media $max_sm
+		text-align center
+		width 100%
+		border-left none
+		border-bottom 1px solid #40484b		
+		&:first-child 
+			border-bottom 1px solid #40484b		
+		&:last-child
+			border none
 .p-main
 	.section-news
 		margin-top 85px
@@ -157,3 +182,48 @@
 				transform translateX(50%)
 			.b-button
 				margin-bottom 8px
+.b-header-link
+	display none
+	@media $max_sm
+		display inline-block
+	margin-left 30px
+	&:last-child
+		margin-right 30px
+	&_navicon
+		position relative
+		border-bottom 2px double $beige 
+		border-top 2px solid $beige
+		height 20px
+		width 28px
+		&:after
+			position absolute
+			content ""
+			width 100%
+			border-top 2px solid $beige
+			top 7px
+.b-mobile-menu
+	position absolute 
+	top 120px
+	left 0
+	width 100%
+	height 100%
+	border-top 1px solid $beige
+	background $black url(../img/cow-2.png) no-repeat
+	background-position center bottom
+	background-size 65%
+	z-index 15
+	text-align center
+	padding-top 57px
+	&__title
+		display block
+		font-size 15px
+		color $light_beige
+		margin-bottom 17px
+	&__value
+		text-transform uppercase
+		font-size 24px
+		font-weight bold
+		display block
+		font-family 'Oswald-Medium'
+		&:nth-child(2)
+			margin-bottom 37px

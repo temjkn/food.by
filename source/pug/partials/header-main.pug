@@ -5,6 +5,7 @@
                 +b('').contact
                     +e('span').title Электронная почта
                     +e('a').value(href="#") info@fortorg.by
+                +b('a')(href="#").header-link._navicon
             +e('').top-c
                 +b('').logo
                     a(href="index.html")
@@ -17,6 +18,10 @@
                     +e('span').title Мобильный телефон
                     +e('a').value(href="tel:+375296896232") +37529 689 62 32;
                     +e('a').value(href="tel:+375447106081") +37544 710 60 81
+                +b('a')(href="#").header-link
+                    +e('img')(src="../img/phone.png", alt="header-phone")
+                +b('a')(href="#").header-link
+                    +e('img')(src="../img/mail.png", alt="header-email")
         +b('nav').nav
             +e('a').item(href="#") о производстве
             +e('a').item(href="#") продукция
@@ -41,3 +46,9 @@
                 +e('img').image(src="../img/car.png")
                 +e('').text Доставка осуществляется
                     span.clear собственным транспортом                  
+        +b('').mobile-menu
+            +e('span').title Телефон/факс
+            +e('a').value(href="tel:+375172652094") +37517 265 20 94
+            +e('span').title Мобильный телефон
+            +e('a').value(href="tel:+375296896232") +37529 689 62 32
+            +e('a').value(href="tel:+375447106081") +37544 710 60 81
