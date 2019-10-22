@@ -1,23 +1,26 @@
 .l-header(style="background-image: url(../img/pic-header-main.jpg)")
     .l-container
         +b('header').header
-            +e('').top-l
-                +b('').contact
-                    +e('span').title Электронная почта
-                    +e('a').value(href="#") info@fortorg.by
+            +e('').top-l.active
+                +b('').mobile-wrapper
+                    +b('').contact
+                        +e('span').title Электронная почта
+                        +e('a').value(href="#") info@fortorg.by
+                        +b('a').button._small(href='#').-visible-sm Обратная связь
                 +b('a')(href="#").header-link._navicon
             +e('').top-c
                 +b('').logo
                     a(href="index.html")
                         img(src="../img/logo.png", alt="logo")
             +e('').top-r
-                +b('').contact._inline
-                    +e('span').title Телефон/факс
-                    +e('a').value(href="tel:+375172652094") +37517 265 20 94
-                +b('').contact._inline
-                    +e('span').title Мобильный телефон
-                    +e('a').value(href="tel:+375296896232") +37529 689 62 32;
-                    +e('a').value(href="tel:+375447106081") +37544 710 60 81
+                +b('').mobile-wrapper
+                    +b('').contact._inline
+                        +e('span').title Телефон/факс
+                        +e('a').value(href="tel:+375172652094") +37517 265 20 94
+                    +b('').contact._inline
+                        +e('span').title Мобильный телефон
+                        +e('a').value(href="tel:+375296896232") +37529 689 62 32;
+                        +e('a').value(href="tel:+375447106081") +37544 710 60 81
                 +b('a')(href="#").header-link
                     +e('img')(src="../img/phone.png", alt="header-phone")
                 +b('a')(href="#").header-link
@@ -46,9 +49,10 @@
                 +e('img').image(src="../img/car.png")
                 +e('').text Доставка осуществляется
                     span.clear собственным транспортом                  
-        +b('').mobile-menu
-            +e('span').title Телефон/факс
-            +e('a').value(href="tel:+375172652094") +37517 265 20 94
-            +e('span').title Мобильный телефон
-            +e('a').value(href="tel:+375296896232") +37529 689 62 32
-            +e('a').value(href="tel:+375447106081") +37544 710 60 81
+        //- +b('').mobile-menu
+        //-     +e('span').title Телефон/факс
+        //-     +e('a').value(href="tel:+375172652094") +37517 265 20 94
+        //-     +e('span').title Мобильный телефон
+        //-     +e('a').value(href="tel:+375296896232") +37529 689 62 32
+        //-     +e('a').value(href="tel:+375447106081") +37544 710 60 81
+        
