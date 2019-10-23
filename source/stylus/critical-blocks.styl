@@ -71,8 +71,6 @@
 			margin 100px 30px -208px
 			padding 10px 40px
 .b-contact
-	@media $max_sm
-		display none
 	&__title
 		display block
 		font-size 14px
@@ -101,6 +99,9 @@
 		font-size 17px
 	&_roster
 		margin-top 23px
+.b-mobile-wrapper .b-contact
+	@media $max_sm
+		display none
 .b-nav
 	position relative
 	text-align center

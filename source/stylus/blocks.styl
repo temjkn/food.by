@@ -13,6 +13,8 @@ footer
 	display table 
 	table-layout fixed
 	width 100%
+	@media $max_sm
+		display block
 	&__column
 		display table-cell
 		vertical-align top
@@ -20,8 +22,21 @@ footer
 			width 89px
 		&_nav
 			width 314px
+			@media $max_sm
+				display block
+				width 100%
+				border-top 1px solid $beige
+				border-bottom 1px solid $beige
+				padding 60px 0
+				margin-bottom 57px
 		&_contacts
 			width 259px
+			@media $max_sm
+				display block
+				width 100%
+		&_company-description
+			@media $max_sm
+				padding-bottom 57px
 	&__contact-row
 		margin-bottom 24px
 		&:last-child
@@ -29,6 +44,9 @@ footer
 .b-footer-nav
 	&__item
 		margin-bottom 20px
+		@media $max_sm
+			display inline-block 
+			width 49%
 		&:last-child
 			margin-bottom 0
 	&__title
@@ -46,6 +64,8 @@ footer
 			text-decoration none			
 .b-footer-text
 	padding 0 59px
+	@media $max_sm
+		padding 0 28px
 	&__item
 		font-size 14px
 		color $light_beige
