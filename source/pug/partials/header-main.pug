@@ -1,13 +1,13 @@
 .l-header(style="background-image: url(../img/pic-header-main.jpg)")
     .l-container
         +b('header').header
-            +e('').top-l.active
+            +e('').top-l
                 +b('').mobile-wrapper
                     +b('').contact
                         +e('span').title Электронная почта
                         +e('a').value(href="#") info@fortorg.by
                         +b('a').button._small(href='#').-visible-sm Обратная связь
-                +b('a')(href="#").header-link._navicon
+                +b('a')(href="#").header-link._navicon._close
             +e('').top-c
                 +b('').logo
                     a(href="index.html")
@@ -25,12 +25,13 @@
                     +e('img')(src="../img/phone.png", alt="header-phone")
                 +b('a')(href="#").header-link
                     +e('img')(src="../img/mail.png", alt="header-email")
-        +b('nav').nav
-            +e('a').item(href="#") о производстве
-            +e('a').item(href="#") продукция
-            +e('a').item(href="#") сотрудничество
-            +e('a').item._active(href="#") новости
-            +e('a').item(href="#") контакты 
+        +b('nav').nav.active
+            +b('').mobile-wrapper
+                +b('a').nav__item(href="#") о производстве
+                +b('a').nav__item(href="#") продукция
+                +b('a').nav__item(href="#") сотрудничество
+                +b('a').nav__item._active(href="#") новости
+                +b('a').nav__item(href="#") контакты 
         +b('').header._center
             +e('').title 
                 span.b-title-1 Экологически чистое мясо
@@ -48,11 +49,5 @@
             +b('').cell
                 +e('img').image(src="../img/car.png")
                 +e('').text Доставка осуществляется
-                    span.clear собственным транспортом                  
-        //- +b('').mobile-menu
-        //-     +e('span').title Телефон/факс
-        //-     +e('a').value(href="tel:+375172652094") +37517 265 20 94
-        //-     +e('span').title Мобильный телефон
-        //-     +e('a').value(href="tel:+375296896232") +37529 689 62 32
-        //-     +e('a').value(href="tel:+375447106081") +37544 710 60 81
+                    span.clear собственным транспортом                 
         

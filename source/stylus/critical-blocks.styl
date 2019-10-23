@@ -105,8 +105,8 @@
 	position relative
 	text-align center
 	border-bottom 1px solid $beige
-	display flex
-	justify-content center
+	// display flex
+	// justify-content center
 	&:after
 		position absolute
 		top 0
@@ -140,6 +140,9 @@
 			background $beige
 			color $black
 			text-decoration none
+	.b-mobile-wrapper
+		display flex
+		justify-content center
 	@media $max_sm
 		display none
 .b-cell
@@ -183,6 +186,8 @@
 			.b-button
 				margin-bottom 8px
 .b-header-link
+	width 25px
+	height 25px
 	display none
 	@media $max_sm
 		display inline-block
@@ -193,43 +198,65 @@
 		position relative
 		border-bottom 2px double $beige 
 		border-top 2px solid $beige
-		height 20px
+		height 25px
 		width 28px
 		&:after
 			position absolute
 			content ""
 			width 100%
 			border-top 2px solid $beige
-			top 7px
-.b-active
-	.b-mobile-wrapper
-		position fixed 
-		top 120px
-		left 0
-		bottom 0
-		width 100%
-		border-top 1px solid $beige
-		background $black url(../img/cow-2.png) no-repeat
-		background-position center bottom
-		background-size 40%
-		z-index 15
-		text-align center
-		padding-top 20px
-	.b-contact
-		display block
-		.b-button
-			margin-top 36px
-	.b-contact_inline
-		display block
-		padding 0
-	.b-contact__title
-		display block
-		font-size 15px
-		color $light_beige
-		margin-bottom 17px
-		margin-top 37px
-	.b-contact__value
-		font-size 24px
-		font-weight bold
-		display block
-		font-family 'Oswald-Medium'
+			top 10px
+	&_close
+		background url(../img/close.png) no-repeat
+		border none 
+		&:after
+			border none 
+		img 
+			display none
+.b-active //добавить для b-top-r, b-top-l, .b-nav
+	@media $max_sm
+		display block !important
+		.b-mobile-wrapper
+			display block
+			position fixed 
+			top 120px
+			left 0
+			bottom 0
+			width 100%
+			border-top 1px solid $beige
+			background $black url(../img/cow-2.png) no-repeat
+			background-position center bottom
+			background-size 40%
+			z-index 15
+			text-align center
+			padding 20px 30px 0
+		.b-contact
+			display block
+			.b-button
+				margin-top 36px
+		.b-contact_inline
+			display block
+			padding 0
+			&:last-child
+				padding 0
+		.b-contact__title
+			display block
+			font-size 15px
+			color $light_beige
+			margin-bottom 17px
+			margin-top 37px
+		.b-contact__value
+			font-size 24px
+			font-weight bold
+			display block
+			font-family 'Oswald-Medium'
+		.b-nav__item
+			display block
+			max-width 100%
+			border-bottom 1px solid $beige
+			padding 40px 0
+			&:first-child
+				margin-top -20px
+			&:hover
+				background-color inherit
+				color $light_beige
