@@ -47,6 +47,11 @@ h1, .b-title-1
 	line-height 1.2
 	&_center
 		text-align center
+		@media $max_sm
+			text-align left
+			margin-bottom 0
+	@media $max_sm
+		font-size 40px
 h2, .b-title-2
 	font-family 'Oswald-Medium'
 	font-size 42px
@@ -71,6 +76,8 @@ h2, .b-title-2
 			content ''
 			width 99px
 			border 1px solid $green
+	@media $max_sm
+		font-size 30px
 h3, .b-title-3
 	display block
 	font-family 'Oswald-Medium'
@@ -80,6 +87,8 @@ h3, .b-title-3
 	line-height 1.19
 	&_outer
 		margin-bottom 20px
+	@media $max_sm
+		font-size 24x
 h4, .b-title-4
 	font-family 'Oswald-Medium'
 	display block
@@ -90,6 +99,8 @@ h4, .b-title-4
 	line-height 1.19
 	&_outer
 		margin-bottom 29px
+	@media $max_sm
+		font-size 18px
 h5, .b-title-5
 	font-family 'Oswald-Medium'
 	font-size 15px
@@ -103,6 +114,8 @@ p
 	color: #313f48
 	&:last-child
 		margin-bottom 0
+	@media $max_sm
+		font-size 15px
 		
 .accent
 	display block
@@ -115,6 +128,8 @@ p
 	padding-bottom 54px
 	margin-bottom 51px
 	border-bottom 1px solid $brown
+	@media $max_sm
+		font-size 18px
 
 ul, ol
 	list-style-position inside

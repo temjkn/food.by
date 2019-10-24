@@ -42,6 +42,35 @@ function SetNewsHeight(){
 	}
 }
 
+categoryCarousel();
+
+var owlState = false;
+function categoryCarousel() {
+	var owl=$('.b-mobile-wrapper');
+	if ($( window ).width()<640){
+		if(owlState== false){
+			owl.addClass('owl-carousel');
+				owl.owlCarousel({
+				loop:false,
+				nav:true,
+				items:4,
+				margin:0,
+				autoWidth:true,
+				navText:[],
+				dots:true
+			});
+			owlState = true;
+		};
+	};
+	if ($( window ).width()>=640){
+		if (owlState==true){
+			owl.removeClass('owl-carousel');
+			owl.trigger('destroy.owl.carousel');
+			owlState=false;
+		};
+	};
+};
+
 //
 // $(function() {
 //     function cutLongText(textSize, finalLength) {

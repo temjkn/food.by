@@ -7,8 +7,8 @@
 	margin 0 auto
 	position relative
 	padding 0 10px
-	@media $min_md
-		padding 0 25px
+	@media $max_sm
+		padding 0 30px
 .l-header
 	padding-bottom 30px
 	background-position center
@@ -20,6 +20,9 @@
 		position absolute
 		stick()
 		background-color rgba(26, 38, 45, 0.75)
+	@media $max_sm
+		padding-bottom 0
+		margin-bottom 40px
 .l-header,footer
 	background-color $black
 	color $beige
@@ -77,7 +80,7 @@
 		@media $max_sm
 			display block
 			width auto
-			margin 100px 30px -208px
+			margin 100px 30px -180px
 			padding 10px 40px
 .b-contact
 	&__title
@@ -201,9 +204,9 @@
 	width 25px
 	height 25px
 	display none
-	margin-left 30px
-	&:last-child
-		margin-right 30px
+	&:nth-child(3)
+		margin-left 30px
+		margin-right 5px
 	&_navicon
 		position relative
 		border-bottom 2px double $beige 

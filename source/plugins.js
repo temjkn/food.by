@@ -38,11 +38,11 @@ module.exports = {
     //     "dist/jquery.fancybox.min.css",
     //     "dist/jquery.fancybox.min.js"
     // ],
-    // "owl.carousel": [
-    //     "dist/owl.carousel.js",
-    //     "dist/assets/owl.carousel.css",
-    //     "dist/assets/owl.theme.default.css"
-    // ],
+    "owl.carousel": [
+        "dist/owl.carousel.js",
+        "dist/assets/owl.carousel.css",
+        "dist/assets/owl.theme.default.css"
+    ],
     // make jquery-ui slider dragable on mobile devices
     // "jqueryui-touch-punch": [
     //     "jquery.ui.touch-punch.min.js"

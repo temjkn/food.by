@@ -6,6 +6,8 @@
 	border-top 1px solid $beige
 	margin-top 126px
 	padding-top 74px
+	@media $max_sm
+		margin-top 60px
 footer 
 	padding-top 74px
 	padding-bottom 120px
@@ -128,11 +130,15 @@ footer
 			width 100%
 .b-title-inner
 	width 88.5%
-	height 252px
+	max-height 252px
 	margin 48px auto 0
 	padding-bottom 4px
 	background $pearl
 	position relative	
+	@media $max_sm
+		margin 37px 0 0
+		width 100%
+		padding 37px 28px 33px
 .button,
 .b-button
 	background $green
@@ -157,6 +163,8 @@ footer
 		padding 17px 30px
 	&-wrapper
 		padding-top 33px
+		@media $max_sm
+			padding-top 17px
 	&_transparent
 		background $white
 		color $black
@@ -166,9 +174,13 @@ footer
 		&:hover
 			background $green
 			color $white
+		@media $max_sm
+			padding 15px 21px
 	&-wrapper_top
 		text-align center
 		padding 0
+		@media $max_sm
+			text-align left
 	&_roster
 		padding 17px 33px
 	@media $max_xs
@@ -183,14 +195,20 @@ footer
 	text-transform none
 .b-news-wrapper
 	padding-top 126px
+	@media $max_sm
+		padding-top 20px
 .p-about_news .b-news-wrapper
 	padding-top 60px
+	@media $max_sm
+		padding-top 0
 .b-heading
 	display flex
 	align-items center
 	position relative
 	margin-bottom 70px
 	justify-content space-between
+	@media $max_sm
+		flex-wrap wrap
 	&:before
 		position absolute
 		top 8px
@@ -202,6 +220,9 @@ footer
 		opacity 0.4	
 	&__text
 		max-width 979px
+	&__title
+		@media $max_sm
+			margin-bottom 57px
 	&_production
 		margin 0
 		display block
@@ -222,6 +243,9 @@ footer
 					left -1000px
 					pointer-events none
 					border-color #f9f7f3
+		@media $max_sm
+			width 100%
+			padding 20px 0
 	&__title
 		margin 30px 31px 0 18px
 	&-card
@@ -235,24 +259,33 @@ footer
 			bottom 20px 
 			left 0
 			border-bottom 1px solid $brown
+			@media $max_sm
+				bottom 0
 		&_no-border
 			&:after
 				border-bottom none
 		.b-title-4
 			text-transform uppercase
 			overflow hidden
-			height 90px
+			max-height 90px
 			line-height 1.5
 			margin-bottom 11px
 			max-height 90px
 			overflow hidden
 	&-card__image
 		width 100%
+		@media $max_sm
+			height 362px
 	&-card_other
 		width 50%
 		padding 0 20px
 		&:after
-			border none
+			border none		
+		@media $max_sm
+			width 100%
+			.b-text
+				padding-left px
+				padding-right 0
 
 .l-container-decoration
 	position relative
@@ -281,16 +314,27 @@ footer
 		padding-bottom 54px
 		margin-bottom 51px
 		border-bottom 1px solid $brown
+		@media $max_sm
+			font-size 18px
+			padding-bottom 39px
+			margin-bottom 37px
 	&_narrow		
 		width 88.5%
 		margin-bottom -79px
 		padding-bottom 29px
+		@media $max_sm
+			width 100%
+			margin-bottom -60px
+	@media $max_sm
+		padding 39px 30px 30px
 .b-inner
 	padding-top 22px
 	&_smaller
 		padding-top 31px
 .section-news
 	margin-bottom 120px
+	@media $max_sm
+		margin-bottom 80px
 .b-text
 	max-width 970px
 	padding 27px 22px 42px
@@ -299,17 +343,19 @@ footer
 	&__title
 		text-transform uppercase
 		overflow hidden
-		height 90px
+		max-height 90px
 		line-height 1.5
 		margin-bottom 11px
 	&__description
-		height 75px
+		max-height 75px
 		overflow hidden
 		font-size 14px
 		color $grey
 		line-height normal
 		padding-top 5px
 		margin-bottom 23px
+		@media $max_sm
+			padding-top 8px
 	&__more
 		background $brown
 		color $white
@@ -321,6 +367,8 @@ footer
 			color $brown
 			background $white
 			border 1px solid $brown
+		@media $max_sm
+			padding 17px 30px
 .b-pagination
 	display flex
 	width 100%
@@ -362,6 +410,9 @@ footer
 	background #ede2d9
 	&__image
 		width 100%
+	@media $max_sm
+		margin-left -30px
+		margin-right -30px
 .b-other-news
 	margin-top 8.4%
 	padding-top 69px
@@ -369,6 +420,8 @@ footer
 	&__wrapper
 		margin -10px -20px
 		font-size 0
+	@media $max_sm
+		margin-top 60px		
 .roster
 	position: relative
 .b-contacts
@@ -567,7 +620,7 @@ footer
 	padding-top 46px
 	margin-bottom -79px
 .p-text .b-section
-	width 1190px
+	max-width 1190px
 .p-contacts .b-contact_column .b-contact__text:hover
 	text-decoration none
 .clear
