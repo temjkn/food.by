@@ -52,8 +52,8 @@ function categoryCarousel() {
 			owl.addClass('owl-carousel');
 				owl.owlCarousel({
 				loop:false,
-				nav:true,
-				items:4,
+				nav:false,
+				items:1,
 				margin:0,
 				autoWidth:true,
 				navText:[],
@@ -62,7 +62,7 @@ function categoryCarousel() {
 			owlState = true;
 		};
 	};
-	if ($( window ).width()>=640){
+	if ($( window ).width()<=640){
 		if (owlState==true){
 			owl.removeClass('owl-carousel');
 			owl.trigger('destroy.owl.carousel');

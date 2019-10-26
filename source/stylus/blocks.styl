@@ -150,6 +150,9 @@ footer
 	border 1px solid $green
 	display inline-block
 	text-decoration none
+	@media $max_xs
+		font-size 15px
+		z-index 1
 	&:hover
 		background $white
 		color $black
@@ -183,8 +186,6 @@ footer
 			text-align left
 	&_roster
 		padding 17px 33px
-	@media $max_xs
-		font-size 15px
 .italic
 	font-family Caveatregular
 	font-size 70px
@@ -209,6 +210,8 @@ footer
 	justify-content space-between
 	@media $max_sm
 		flex-wrap wrap
+		&:before
+			top 0
 	&:before
 		position absolute
 		top 8px
@@ -270,7 +273,7 @@ footer
 			max-height 90px
 			line-height 1.5
 			margin-bottom 11px
-			max-height 90px
+			max-height 88px
 			overflow hidden
 	&-card__image
 		width 100%
@@ -333,8 +336,28 @@ footer
 		padding-top 31px
 .section-news
 	margin-bottom 120px
-	@media $max_sm
-		margin-bottom 80px
+	@media $max_sm 
+		.b-news
+			overflow-x auto
+			&__cols-wrap
+				width 1200px
+			&__col
+				width 339px
+				padding 20px 15px
+			&-card__image
+				height 211px
+	@media $max_xs
+		.b-news
+			&__cols-wrap
+				width 100%
+				margin 0 -15px
+			&__col
+				width 100%
+				padding 20px 0
+			&-card:after
+				border-bottom none
+			&-card__image
+				width 100%
 .b-text
 	max-width 970px
 	padding 27px 22px 42px
@@ -347,7 +370,7 @@ footer
 		line-height 1.5
 		margin-bottom 11px
 	&__description
-		max-height 75px
+		max-height 78px
 		overflow hidden
 		font-size 14px
 		color $grey
@@ -428,6 +451,8 @@ footer
 	margin-bottom 37px
 .maps 
 	height 710px
+	@media $max_sm
+		height 793px
 .b-contacts-wrapper
 	position absolute
 	top 0
@@ -436,6 +461,9 @@ footer
 	right 0
 	padding-top 90px
 	pointer-events none
+	@media $max_sm
+		padding-top 0
+		top -60px
 
 .b-frame
 	width 545px
@@ -444,6 +472,8 @@ footer
 	outline 10px solid $white
 	padding 50px 36px 63px
 	pointer-events all
+	@media $max_sm
+		width 100%
 	&:hover
 		outline 10px solid $white
 	&_right
@@ -513,9 +543,15 @@ footer
 		font-size 0
 		overflow hidden
 		padding 10px 0
+		@media $max_sm
+			flex-wrap nowrap
+			overflow-y scroll
+			width 1200px
 		.b-frame
 			width calc(25% - 50px)
 			margin 0 25px
+			@media $max_sm
+				width 263px
 
 .b-animal
 	width 100%
@@ -632,12 +668,36 @@ footer
 .b-our-products
 	padding-top 120px
 	margin-bottom 120px
+	@media $max_sm
+		margin-bottom 40px
+	@media $max_xs
+		padding-top 130px
+		margin-bottom 45px
 	&__wrap
 		position relative
 		padding-bottom 100px
 		background url(../img/prod-cow.png) no-repeat
 		background-position center bottom
 		position relative
+		@media $max_sm
+			display flex
+			flex-wrap wrap
+			background-position center center
+			>.l-container
+				order -1
+				>.b-description
+					width 100%
+					.b-title-1
+						margin-bottom 50px
+				.b-description__text_last
+					margin-bottom 57px
+		@media $max_xs
+			background-size 65%
+			.l-container
+				>.b-description .b-title-1
+					margin-bottom 31px
+				.b-description__text_last
+					margin-bottom 37px
 	&__bg
 		position absolute
 		top 0
@@ -645,9 +705,14 @@ footer
 		left calc(50% + 50px)
 		bottom 0
 		background-size cover
-
-
-
+		@media $max_sm
+			position relative
+			width 100% 
+			height 512px
+			left 0
+			margin-top 50px
+		@media $max_xs
+			margin-top 60px
 .b-description
 	padding-top 84px
 	width 50%
@@ -660,47 +725,90 @@ footer
 			margin-bottom 26px
 			&:last-child
 				margin-bottom 72px
-
 .b-fresh-meat
 	overflow hidden
 	padding 100px 0 110px
 	margin-top -100px
 	margin-bottom 45px
+	@media $max_sm
+		padding-top 40px
+		padding-bottom 60px
+		margin-bottom 0
 	&__table-wrap
 		display table
 		table-layout fixed
 		width 100%
 		border-collapse collapse
+		@media $max_sm
+			display block
 	&__left,&__right
 		display table-cell
 		vertical-align middle
 		border solid 5px #ebe6db
+		@media $max_sm
+			display block
 	&__left
 		position relative
 		width 329px
+		@media $max_sm
+			width 100%
+			height 245px
+			text-align center
+			border-bottom none
 	&__right
 		padding 52px 59px
+		@media $max_sm
+			padding-left 35px
+			padding-right 35px
+			padding-bottom 62px
+		@media $max_sm
+			padding-left 25px
+			padding-top 65px
+			padding-bottom 45px
 	&__img
 		position absolute
 		top -104px
 		left -84px
 		z-index -1
+		@media $max_sm
+			width 312px
+			position relative
+			left 0
+			top -40px
+			margin 0 auto
+	&__text 
+		@media $max_sm
+			padding-top 11px
 	.b-title-2
 		color $brown
 		margin-bottom 25px
+		@media $max_sm
+			margin-top 28px
+		@media $max_xs
+			margin-top 0px
 	p
 		color $brown
 		margin-bottom 0
 
 .b-our-production
+	&_wrapper
+		@media $max_sm
+			overflow auto
 	.b-heading
 		align-items flex-end
+		@media $max_sm
+			align-items center
+			margin-bottom 0
 		&:before
 			right 50%
 			transform translateX(50%)
 			content none
 		.b-button
 			margin-bottom 8px
+			@media $max_xs
+				position absolute
+				bottom -530px
+				z-index 5
 	&__wrap
 		background url(../img/pic-partnership-main.jpg)
 		background-size cover
@@ -708,19 +816,42 @@ footer
 		background-position right -200px center
 		@media $min_1500
 			background-position right center
+		@media $max_sm
+			position relative
+			padding-bottom 140px
+			&:before 
+				content: ''
+				position: absolute;
+				top: 0;
+				left: 0
+				width: 100%;
+				height: 100%
+				background-color: rgba(26,38,45,.75);
+		@media $max_xs
+			padding-top 275px
 	&__text-wrap
 		width 50%
 		margin-left auto
+		@media $max_sm
+			margin-left 0
+			width 100%	
+			color $beige	
+			.b-title-1	
+				color $beige
 		p
 			color white
 			margin-bottom 30px
 			&:last-child
 				margin-bottom 70px
+				@media $max_sm
+					margin-bottom 57px
 		.b-title-1
 			color white
 			margin-bottom 60px
 	&__text
 		max-width 542px
+		@media $max_sm
+			max-width 100%
 	.l-container
 		+
 			.b-our-production

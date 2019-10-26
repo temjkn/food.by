@@ -9,6 +9,8 @@
 	padding 0 10px
 	@media $max_sm
 		padding 0 30px
+	@media $max_xs
+		padding 0 15px
 .l-header
 	padding-bottom 30px
 	background-position center
@@ -192,7 +194,10 @@
 .p-main
 	.section-news
 		margin-top 85px
-		margin-bottom 80px
+		margin-bottom 80px		
+		@media $max_sm
+			margin-top 60px
+			margin-bottom 140px
 		.b-heading
 			align-items flex-end
 			&:before
@@ -200,6 +205,9 @@
 				transform translateX(50%)
 			.b-button
 				margin-bottom 8px
+			@media $max_sm
+				&__title
+					margin-bottom 0
 .b-header-link
 	width 25px
 	height 25px
