@@ -62,11 +62,12 @@
 			margin-bottom 20px
 			@media $max_xs
 				font-size 34px
+		@media $max_sm
+			width 100%
 		@media $max_xs
 			background-size 100%
 			background-position center
 			margin-top 10px
-			width 90%
 	&__text
 		padding 0 130px
 		font-size 17px
@@ -84,6 +85,10 @@
 			width auto
 			margin 100px 30px -180px
 			padding 10px 40px
+		@media $max_xs
+			margin-left 0
+			margin-right 0
+			margin-bottom -100px
 .b-contact
 	&__title
 		display block
@@ -167,11 +172,25 @@
 	width 33%
 	border-left 1px solid #40484b
 	padding 20px 0 15px 40px
+	@media $max_sm
+		text-align center
+		width 100%
+		border-left none
+		border-bottom 1px solid #40484b		
+		&:first-child 
+			border-bottom 1px solid #40484b		
+		&:last-child
+			border none
+	@media $max_xs
+		padding-left 0
 	&:first-child
 		border none
 	&__image,
 	&__text
 		display inline-block
+	&__image
+		@media $max_xs
+			margin-bottom 8px
 	&__text
 		position absolute
 		font-size 17px
@@ -182,15 +201,10 @@
 			min-width 210px
 			position relative
 			text-align left
-	@media $max_sm
-		text-align center
-		width 100%
-		border-left none
-		border-bottom 1px solid #40484b		
-		&:first-child 
-			border-bottom 1px solid #40484b		
-		&:last-child
-			border none
+		@media $max_xs
+			min-width 202px
+			text-align center
+			display block
 .p-main
 	.section-news
 		margin-top 85px
@@ -198,16 +212,26 @@
 		@media $max_sm
 			margin-top 60px
 			margin-bottom 140px
+		@media $max_xs
+			position relative
 		.b-heading
 			align-items flex-end
+			@media $max_sm
+				&__title
+					margin-bottom 0	
+			@media $max_xs
+				position static
+				margin-bottom 20px
 			&:before
 				right 50%
 				transform translateX(50%)
+				@media $max_xs
+					top 60px
 			.b-button
 				margin-bottom 8px
-			@media $max_sm
-				&__title
-					margin-bottom 0
+				@media $max_xs
+					position absolute
+					bottom -80px 		
 .b-header-link
 	width 25px
 	height 25px

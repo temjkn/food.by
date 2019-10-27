@@ -14,6 +14,7 @@ footer
 	@media $max_sm
 		padding-bottom 80px
 	@media $max_xs
+		padding-top 60px
 		padding-bottom 60px
 .b-footer
 	display table 
@@ -139,6 +140,10 @@ footer
 		margin 37px 0 0
 		width 100%
 		padding 37px 28px 33px
+	@media $max_xs
+		margin-bottom 110px
+		max-height inherit
+		padding 37px 15px 33px
 .button,
 .b-button
 	background $green
@@ -220,10 +225,14 @@ footer
 		height 130px
 		width 510px
 		background url(../img/knifes.png) no-repeat
-		opacity 0.4	
+		opacity 0.4
+		@media $max_xs
+			width 100%	
+			background-size 100%
 	&__text
 		max-width 979px
 	&__title
+		z-index 1
 		@media $max_sm
 			margin-bottom 57px
 	&_production
@@ -248,7 +257,10 @@ footer
 					border-color #f9f7f3
 		@media $max_sm
 			width 100%
-			padding 20px 0
+			padding 20px 0	
+		@media $max_xs
+			width 339px
+			padding 20px 15px
 	&__title
 		margin 30px 31px 0 18px
 	&-card
@@ -269,16 +281,16 @@ footer
 				border-bottom none
 		.b-title-4
 			text-transform uppercase
-			overflow hidden
-			max-height 90px
 			line-height 1.5
 			margin-bottom 11px
-			max-height 88px
+			max-height 87px
 			overflow hidden
 	&-card__image
 		width 100%
 		@media $max_sm
 			height 362px
+		@media $max_sm
+			height 211px
 	&-card_other
 		width 50%
 		padding 0 20px
@@ -286,8 +298,9 @@ footer
 			border none		
 		@media $max_sm
 			width 100%
+			padding 15px
 			.b-text
-				padding-left px
+				padding-left 0
 				padding-right 0
 
 .l-container-decoration
@@ -306,6 +319,10 @@ footer
 	position relative
 	width 100%
 	margin 0 auto
+	@media $max_sm
+		padding 39px 30px 30px
+	@media $max_xs
+		padding 39px 15px 30px
 	&__title
 		display block
 		font-family 'Oswald-Regular'
@@ -328,8 +345,6 @@ footer
 		@media $max_sm
 			width 100%
 			margin-bottom -60px
-	@media $max_sm
-		padding 39px 30px 30px
 .b-inner
 	padding-top 22px
 	&_smaller
@@ -339,19 +354,21 @@ footer
 	@media $max_sm 
 		.b-news
 			overflow-x auto
+			overflow -moz-scrollbar-none
+			scrollbar-width none
+			-ms-overflow-style none
+			&:-webkit-scrollbar
+				display none
 			&__cols-wrap
 				width 1200px
-			&__col
-				width 339px
-				padding 20px 15px
-			&-card__image
-				height 211px
 	@media $max_xs
 		.b-news
+			margin 0 -15px
 			&__cols-wrap
 				width 100%
-				margin 0 -15px
+				margin 0
 			&__col
+				display block
 				width 100%
 				padding 20px 0
 			&-card:after
@@ -361,6 +378,10 @@ footer
 .b-text
 	max-width 970px
 	padding 27px 22px 42px
+	@media $max_xs
+		padding-bottom 0
+		padding-left 15px
+		padding-right 15px
 	&_center
 		text-align center
 	&__title
@@ -436,6 +457,9 @@ footer
 	@media $max_sm
 		margin-left -30px
 		margin-right -30px
+	@media $max_xs
+		margin-left -15px
+		margin-right -15px
 .b-other-news
 	margin-top 8.4%
 	padding-top 69px
@@ -446,13 +470,20 @@ footer
 	@media $max_sm
 		margin-top 60px		
 .roster
-	position: relative
+	position relative
+	@media $max_xs
+		display flex
+		flex-wrap wrap
+		padding-top 5px
 .b-contacts
 	margin-bottom 37px
 .maps 
 	height 710px
 	@media $max_sm
 		height 793px
+	@media $max_xs
+		width 100%
+		height 362px
 .b-contacts-wrapper
 	position absolute
 	top 0
@@ -464,7 +495,14 @@ footer
 	@media $max_sm
 		padding-top 0
 		top -60px
-
+	@media $max_xs
+		top 0
+		position relative
+		order -1
+		margin-bottom 10px
+.b-frame-wrapper
+	@media $max_xs
+		margin 0 -5px
 .b-frame
 	width 545px
 	background $white
@@ -474,6 +512,8 @@ footer
 	pointer-events all
 	@media $max_sm
 		width 100%
+	@media $max_xs
+		padding 31px 21px
 	&:hover
 		outline 10px solid $white
 	&_right
@@ -537,7 +577,8 @@ footer
 	justify-content space-between
 	margin-bottom -100px
 	&_main
-		width auto
+		// width auto
+		width 100%
 		justify-content left
 		margin 0 -15px
 		font-size 0
@@ -794,6 +835,10 @@ footer
 	&_wrapper
 		@media $max_sm
 			overflow auto
+			scrollbar-width none
+			-ms-overflow-style none
+			&:-webkit-scrollbar
+				display none
 	.b-heading
 		align-items flex-end
 		@media $max_sm

@@ -92,23 +92,24 @@ html
 			.maps
 			.b-contacts-wrapper
 				.l-container
-					+b('').frame_right
-							+b('').contacts
-									+b('span').title-2._roster Контакты
-									+b('').contact._column
-											+e('span').title._column._roster Наш адрес
-											+e('p').text 220038, Республика Беларусь, Минская обл., Минский р-н, Боровлянский с-с, 82 (район д. Лесновка)
-									+b('').contact._column
-											+e('span').title._column._roster Телефон/факс
-											+e('a').text(href="tel:+375172652094") +37517 265 20 94
-									+b('').contact._column
-											+e('span').title._column._roster Мобильный телефон
-											+e('a').text(href="tel:+375296896232") +37529 689 62 32;
-											+e('a').text(href="tel:+375447106081") +37544 710 60 81
-									+b('').contact._column
-											+e('span').title._column._roster Электронная почта
-											+e('a').value._email(href="#") info@fortorg.by
-							+b('a').button._roster(href='#') Напишите нам
+					+b('').frame-wrapper
+						+b('').frame_right
+								+b('').contacts
+										+b('span').title-2._roster Контакты
+										+b('').contact._column
+												+e('span').title._column._roster Наш адрес
+												+e('p').text 220038, Республика Беларусь, Минская обл., Минский р-н, Боровлянский с-с, 82 (район д. Лесновка)
+										+b('').contact._column
+												+e('span').title._column._roster Телефон/факс
+												+e('a').text(href="tel:+375172652094") +37517 265 20 94
+										+b('').contact._column
+												+e('span').title._column._roster Мобильный телефон
+												+e('a').text(href="tel:+375296896232") +37529 689 62 32;
+												+e('a').text(href="tel:+375447106081") +37544 710 60 81
+										+b('').contact._column
+												+e('span').title._column._roster Электронная почта
+												+e('a').value._email(href="#") info@fortorg.by
+								+b('a').button._roster(href='#') Напишите нам
 		include partials/footer
 		include inc/vendor-scripts
 		script(src="js/client.min.js")
