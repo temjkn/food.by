@@ -46,14 +46,14 @@ categoryCarousel();
 
 var owlState = false;
 function categoryCarousel() {
-	var owl=$('.b-mobile-wrapper');
+	var owl=$('.b-header_bottom');
 	if ($( window ).width()<640){
 		if(owlState== false){
 			owl.addClass('owl-carousel');
 				owl.owlCarousel({
 				loop:false,
-				nav:false,
-				items:1,
+				nav:true,
+				items:4,
 				margin:0,
 				autoWidth:true,
 				navText:[],
@@ -62,7 +62,7 @@ function categoryCarousel() {
 			owlState = true;
 		};
 	};
-	if ($( window ).width()<=640){
+	if ($( window ).width()>=640){
 		if (owlState==true){
 			owl.removeClass('owl-carousel');
 			owl.trigger('destroy.owl.carousel');
