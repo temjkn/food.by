@@ -1,9 +1,13 @@
+var owlState = false;
+
 $(window).on('load', function () {
 	SetNewsHeight();
+	MainTriggersCarousel();
 });
 
 $(window).on('resize', function () {
 	SetNewsHeight();
+	MainTriggersCarousel();
 });
 
 //устанавниаем одинаковую(максимальную) высоту в ряду у заголовков новостей
@@ -42,28 +46,26 @@ function SetNewsHeight(){
 	}
 }
 
-categoryCarousel();
+function MainTriggersCarousel() {
 
-var owlState = false;
-function categoryCarousel() {
-	var owl=$('.b-header_bottom');
-	if ($( window ).width()<640){
-		if(owlState== false){
+	var owl = $('.b-header_bottom');
+	if ($( window ).width() < 640){
+		if(owlState == false){
 			owl.addClass('owl-carousel');
 				owl.owlCarousel({
 				loop:false,
 				nav:true,
-				items:4,
+				items:1,
 				margin:0,
-				autoWidth:true,
+				autoWidth:false,
 				navText:[],
 				dots:true
 			});
 			owlState = true;
 		};
 	};
-	if ($( window ).width()>=640){
-		if (owlState==true){
+	if ($( window ).width() >= 640){
+		if (owlState == true){
 			owl.removeClass('owl-carousel');
 			owl.trigger('destroy.owl.carousel');
 			owlState=false;
