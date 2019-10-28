@@ -33,27 +33,35 @@
 	display table
 	table-layout fixed
 	width 100%
-	padding-top 20px
-	padding-bottom 20px
-	@media $max_sm
-		padding-top 0
+	padding 20px 0
 	&__top-l,
 	&__top-r,
 	&__top-c
 		display table-cell
 		vertical-align middle
 		position relative
-		z-index 99	
-		@media $max_sm
-			padding-top 20px
+		z-index 16	
 	&__top-r
-		text-align: right
+		text-align right
+		&.js-menu .b-mobile-wrapper
+			top 120px
+			padding-top 0
 	&__top-c
 		width 89px
 		@media $max_sm
 			width 63px
 			img 
 				width 100%
+	&_active-menu
+		position fixed
+		background $black
+		padding 20px 30px 
+		z-index 99
+		left 0
+		top 0
+		border-bottom 1px solid $beige
+		@media $max_xs
+			padding 20px 15px
 	.b-contact
 		&_inline:last-child
 			padding-left 28px
@@ -246,6 +254,7 @@
 	display none
 	@media $max_sm
 		display inline-block
+		z-index 99
 	@media $max_xs
 		margin-left 15px
 		&:last-child
@@ -273,7 +282,7 @@
 			border none 
 		img 
 			display none
-.js-menu //добавить для b-top-r, b-top-l, .b-nav
+.js-menu //добавить для b-top-r, b-top-l, .b-nav, и для .b-header - _active-menu
 	@media $max_sm
 		.b-mobile-wrapper
 			display block
