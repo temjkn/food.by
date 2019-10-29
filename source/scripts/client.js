@@ -54,7 +54,7 @@ function MainTriggersCarousel() {
 			owl.addClass('owl-carousel');
 				owl.owlCarousel({
 				loop:false,
-				nav:true,
+				nav:false,
 				items:1,
 				margin:0,
 				autoWidth:false,

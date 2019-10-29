@@ -52,6 +52,8 @@
 			width 63px
 			img 
 				width 100%
+		@media $max_xs
+			width 51px
 	&_active-menu
 		position fixed
 		background $black
@@ -79,12 +81,16 @@
 			background-position center
 		@media $max_xs
 			margin-top 10px
+			margin-bottom 0
+			padding-top 66px
+			height 364px
 		.b-title-1
 			margin-bottom 20px
 			@media $max_sm
 				margin-bottom 36px
 			@media $max_xs
 				font-size 34px
+				margin-bottom 17px
 	&__text
 		padding 0 130px
 		font-size 17px
@@ -96,6 +102,9 @@
 			padding 0 50px
 			font-size 15px
 			margin-bottom 32px
+		@media $max_xs
+			padding 0
+			margin-bottom 24px
 	&_bottom
 		background $black
 		margin-bottom 30px
@@ -105,9 +114,8 @@
 			margin 100px 0 -218px
 			padding 10px 40px
 		@media $max_xs
-			margin-left 0
-			margin-right 0
-			margin-bottom -100px
+			margin 76px 0 -150px
+			padding 0 40px 29px
 .b-contact
 	&__title
 		display block
@@ -119,6 +127,8 @@
 		font-size 17px
 		font-weight bold
 		display inline-block
+		@media $max_xs
+			font-size 15px
 		&_email
 			color $green
 		&:nth-child(2)
@@ -135,6 +145,8 @@
 		line-height 1.1
 		padding-top 5px
 		font-size 17px
+		@media $max_xs
+			font-size 15px
 	&_roster
 		margin-top 23px
 .b-mobile-wrapper .b-contact
@@ -203,6 +215,7 @@
 			border none
 	@media $max_xs
 		padding-left 0
+		padding-bottom 6px
 	&:first-child
 		border none
 	&__image,
@@ -211,8 +224,6 @@
 	&__image
 		@media $max_sm
 			margin-right 15px
-		@media $max_xs
-			margin-bottom 8px
 	&__text
 		position absolute
 		font-size 17px
@@ -225,9 +236,10 @@
 			text-align left
 			top -9px
 		@media $max_xs
-			min-width 202px
+			min-width 200px
 			text-align center
 			display block
+			margin-left 0
 .b-logo	
 	position relative
 .b-header-link
@@ -238,25 +250,31 @@
 		display inline-block
 		z-index 99
 	@media $max_xs
-		margin-left 15px
-		&:last-child
-			margin-left 20px
-			margin-right 15px
+		margin-left 0
+		img 
+			width 25px
 	&:nth-child(3)
 		margin-left 28px
 		margin-right 6px
+		@media $max_xs
+			margin-left 16px
+			margin-right 1px
 	&_navicon
 		position relative
 		border-bottom 2px double $beige 
 		border-top 2px solid $beige
 		height 21px
 		width 28px
+		@media $max_xs
+			height 18px
 		&:after
 			position absolute
 			content ""
 			width 100%
 			border-top 2px solid $beige
 			top 7px
+			@media $max_xs
+				top 6px
 	&_close
 		background url(../img/close.png) no-repeat
 		border none 

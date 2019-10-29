@@ -2,7 +2,6 @@ html
 	height 100%
 	font-size $rootFontSize, false
 	user-select auto
-
 body
 	font-family 'PT_Root_UI_Regular', sans-serif
 	font-size 15px
@@ -52,6 +51,7 @@ h1, .b-title-1
 		line-height .7
 	@media $max_xs
 		font-size 34px
+		line-height 1.2
 	&_center
 		text-align center
 		@media $max_sm
@@ -65,8 +65,12 @@ h2, .b-title-2
 	display block
 	line-height 1.19
 	text-transform uppercase
+	@media $max_sm
+		font-size 30px
+	@media $max_xs
+		font-size 26px
 	&_roster
-		margin-bottom 27px
+		margin-bottom 18px !important
 	&_other
 		margin-bottom 45px
 	&_center
@@ -82,8 +86,6 @@ h2, .b-title-2
 			content ''
 			width 99px
 			border 1px solid $green
-	@media $max_sm
-		font-size 30px
 h3, .b-title-3
 	display block
 	font-family 'Oswald-Medium'
