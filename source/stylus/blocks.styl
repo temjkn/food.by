@@ -337,6 +337,11 @@ footer
 				padding-top 18px
 				.b-title-4
 					margin-bottom 7px
+	&-mobile-wrapper
+		@media $max_sm
+			margin 0 -30px 0 -15px
+		@media $max_xs
+			margin 0 -15px 0 0
 .l-container-decoration
 	position relative
 	&:after
@@ -387,46 +392,75 @@ footer
 	margin-bottom 120px
 	@media $max_sm
 		margin-bottom 80px	
-.p-main .section-news	
-	@media $max_sm 
-		margin-bottom 78px		
-		.b-title-1			
-			line-height .7
-		.b-news
-			overflow-x auto
-			overflow -moz-scrollbar-none
-			scrollbar-width none
-			-ms-overflow-style none
-			&:-webkit-scrollbar
-				display none
-			&__cols-wrap
-				width 1200px
+.p-main 
+	.b-news-card .b-title-4	
+		@media $max_sm
+			max-height 76px
+	.section-news
+		margin-top 85px
+		margin-bottom 80px	
+		@media $max_sm 
+			margin-bottom 78px		
+			margin-top 43px		
+			.b-title-1			
+				line-height .7
+			.b-news
+				&__cols-wrap
+					margin 12px 0 0
+					display flex
+					flex-wrap nowrap
+					overflow-x auto
+					scrollbar-width none
+					-ms-overflow-style none
+				&__col
+					width 368px
+					padding 0 15px
+				&-card
+					min-width: 338px
+					&__image
+						width 100%
+						@media $max_sm
+							height 211px
+			.b-text
+				padding-top 20px
+				&__description
+					margin-bottom 33px
+		@media $max_xs
+			position relative
+			.b-news
 				margin 0 -15px
-			&__col
-				width 368px
-				padding 0 15px
-			&-card__image
-				width 100%
+				&__cols-wrap
+					width 100%
+					margin 0
+				&__col
+					display block
+					width 100%
+					padding 20px 0
+				&-card:after
+					border-bottom none
+				&-card__image
+					width 100%
+		.b-heading
+			align-items flex-end
+			@media $max_sm
+				margin-bottom 50px
+				&__title
+					margin-bottom 0	
+			@media $max_xs
+				position static
+				margin-bottom 20px
+			&:before
+				right 50%
+				transform translateX(50%)
+				@media $max_xs
+					top 60px
+			.b-button
+				margin-bottom 8px
 				@media $max_sm
-					height 211px
-		.b-text
-			padding-top 20px
-			&__description
-				margin-bottom 33px
-	@media $max_xs
-		.b-news
-			margin 0 -15px
-			&__cols-wrap
-				width 100%
-				margin 0
-			&__col
-				display block
-				width 100%
-				padding 20px 0
-			&-card:after
-				border-bottom none
-			&-card__image
-				width 100%
+					margin-bottom 0
+				@media $max_xs
+					position absolute
+					bottom -80px 	
 .b-text
 	max-width 970px
 	padding 27px 22px 42px
@@ -543,7 +577,6 @@ footer
 	height 710px
 	@media $max_sm
 		height 793px
-		background green
 	@media $max_xs
 		width 100%
 		height 362px
@@ -605,7 +638,7 @@ footer
 				&:before
 					top 37px
 					@media $max_sm
-						top 8px
+						top 2px
 	&__image
 		margin 0 auto
 	&__text
@@ -657,14 +690,21 @@ footer
 		overflow hidden
 		padding 10px 0
 		@media $max_sm
-			flex-wrap nowrap
-			overflow-y scroll
-			width 1200px
+			margin 0
+			flex-wrap: nowrap
+			min-height: 330px
+			overflow-x: auto
+			scrollbar-width none
+			-ms-overflow-style none
+			&:-webkit-scrollbar
+				display none
 		.b-frame
 			width calc(25% - 50px)
 			margin 0 25px
 			@media $max_sm
-				width 263px
+				min-width: 241px;
+				margin 0 18px
+				padding-bottom 0
 			@media $max_xxs
 				width 215px
 .b-animal
@@ -800,19 +840,8 @@ footer
 			background-size 90%
 			>.l-container
 				order -1
-				>.b-description
-					width 100%
-					.b-title-1
-						margin-bottom 54px
-				.b-description__text_last
-					margin-bottom 57px
 		@media $max_xs
 			background-size 65%
-			.l-container
-				>.b-description .b-title-1
-					margin-bottom 31px
-				.b-description__text_last
-					margin-bottom 37px
 	&__bg
 		position absolute
 		top 0
@@ -834,14 +863,25 @@ footer
 	padding-right 50px
 	@media $max_sm
 		padding-top 98px
+		width 100%
 	.b-title-1
 		margin-bottom 58px
+		@media $max_sm
+			margin-bottom 54px
+			line-height .7
+		@media $max_xs
+			margin-bottom 31px
 	&__text
 		display block
 		p
 			margin-bottom 26px
 			&:last-child
 				margin-bottom 72px
+	&__text_last
+		@media $max_sm
+			margin-bottom 57px
+		@media $max_xs
+			margin-bottom 37px
 .b-fresh-meat
 	overflow hidden
 	padding 100px 0 110px
@@ -898,15 +938,12 @@ footer
 	p
 		color $brown
 		margin-bottom 0
-
 .b-our-production
 	&_wrapper
 		@media $max_sm
-			overflow auto
-			scrollbar-width none
-			-ms-overflow-style none
-			&:-webkit-scrollbar
-				display none
+			margin 8px -30px 0 -8px
+		@media $max_xs
+			margin 0 -15px 0 -8px
 	.b-heading
 		align-items flex-end
 		@media $max_sm
@@ -977,7 +1014,7 @@ footer
 				&__wrap
 					margin-top -80px
 					@media $max_sm
-						margin-top -72px
+						margin-top -60px
 						padding-top 161px
 .p-about_news 
 	.b-news-wrapper

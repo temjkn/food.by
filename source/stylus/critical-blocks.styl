@@ -72,12 +72,6 @@
 		text-align center
 		background url(../img/cow-2.png) no-repeat
 		padding-top 79px
-		.b-title-1
-			margin-bottom 20px
-			@media $max_sm
-				margin-bottom 36px
-			@media $max_xs
-				font-size 34px
 		@media $max_sm
 			width 100%
 			padding-top 135px
@@ -85,6 +79,12 @@
 			background-position center
 		@media $max_xs
 			margin-top 10px
+		.b-title-1
+			margin-bottom 20px
+			@media $max_sm
+				margin-bottom 36px
+			@media $max_xs
+				font-size 34px
 	&__text
 		padding 0 130px
 		font-size 17px
@@ -228,36 +228,6 @@
 			min-width 202px
 			text-align center
 			display block
-.p-main
-	.section-news
-		margin-top 85px
-		margin-bottom 80px		
-		@media $max_sm
-			margin-top 42px
-			margin-bottom 100px
-		@media $max_xs
-			position relative
-		.b-heading
-			align-items flex-end
-			@media $max_sm
-				margin-bottom 61px
-				&__title
-					margin-bottom 0	
-			@media $max_xs
-				position static
-				margin-bottom 20px
-			&:before
-				right 50%
-				transform translateX(50%)
-				@media $max_xs
-					top 60px
-			.b-button
-				margin-bottom 8px
-				@media $max_sm
-					margin-bottom 0
-				@media $max_xs
-					position absolute
-					bottom -80px 	
 .b-logo	
 	position relative
 .b-header-link
