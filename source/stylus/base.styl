@@ -33,7 +33,9 @@ h1, h2, h3, h4, h5, .b-title-1, .b-title-2, .b-title-3, .b-title-4, .b-title-5
 	margin-top 48px
 	&:first-child
 		margin-top 0
-
+	@media $max_sm
+		margin-bottom 34px
+		margin-top 33px
 h1, .b-title-1
 	font-family 'Oswald-Medium'
 	font-size: 56px;
@@ -92,7 +94,6 @@ h3, .b-title-3
 	@media $max_sm
 		font-size 24x
 h4, .b-title-4
-	font-family 'Oswald-Medium'
 	display block
 	font-family 'Oswald-Medium'
 	font-size 20px
@@ -113,8 +114,8 @@ h5, .b-title-5
 p
 	margin-bottom 20px
 	font-size: 17px
-	font-weight: normal
-	line-height: 1.53
+	font-weight normal
+	line-height 1.53
 	color: #313f48
 	&:last-child
 		margin-bottom 0

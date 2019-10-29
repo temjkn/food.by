@@ -8,11 +8,13 @@
 	padding-top 74px
 	@media $max_sm
 		margin-top 60px
+		padding-top 57px
 footer 
 	padding-top 74px
 	padding-bottom 120px
 	@media $max_sm
 		padding-bottom 80px
+		padding-top 60px
 	@media $max_xs
 		padding-top 60px
 		padding-bottom 60px
@@ -220,10 +222,6 @@ footer
 	padding-top 126px
 	@media $max_sm
 		padding-top 0
-.p-about_news .b-news-wrapper
-	padding-top 60px
-	@media $max_sm
-		padding-top 0
 .b-heading
 	display flex
 	align-items center
@@ -265,12 +263,6 @@ footer
 		margin-bottom 18.5%
 	.b-title-1
 		margin-bottom 0
-// .p-news
-// 	.section-news .b-news__cols-wrap 
-		
-// 	// .b-news__col
-// 	// 	width 100%
-// 	// 	padding 10px 0
 .b-news
 	colsWrap(3,40,20)
 	margin-bottom 40px
@@ -326,10 +318,16 @@ footer
 			border none		
 		@media $max_sm
 			width 100%
-			padding 15px
+			padding 15px 0
+			&:after
+				bottom 20px
+				border-bottom 1px solid #c8ae97
 			.b-text
 				padding-left 0
 				padding-right 0
+				padding-top 18px
+				.b-title-4
+					margin-bottom 7px
 .l-container-decoration
 	position relative
 	&:after
@@ -511,11 +509,13 @@ footer
 	margin-top 8.4%
 	padding-top 69px
 	border-top 1px solid $brown
+	@media $max_sm
+		margin-top 60px
 	&__wrapper
 		margin -10px -20px
 		font-size 0
-	@media $max_sm
-		margin-top 60px		
+		@media $max_sm
+			margin -10px 0		
 .roster
 	position relative
 	@media $max_xs
@@ -969,6 +969,10 @@ footer
 						margin-top -72px
 						padding-top 161px
 .p-about_news 
+	.b-news-wrapper
+		padding-top 60px
+		@media $max_sm
+			padding-top 0
 	@media $max_sm
 		.b-button-wrapper_top
 			padding-top 0
@@ -980,31 +984,72 @@ footer
 		.b-substrate__image
 			height 517px
 		.b-section
-			padding 34px 28px 30px
+			padding 34px 28px 16px
 			&__title
 				padding-bottom 28px
 				margin-bottom 31px
 		.b-inner 
 			padding-top 8px
-			.b-title-2
-				margin-bottom 28px
-		.b-title-3_inner
+		.b-title-2
+			margin-bottom 28px
+		.b-title-3
 			margin 27px 0
-		.b-title-4_inner
+		.b-title-4
 			margin-bottom 27px
 		.b-other-news 
 			margin-top 62px
 			padding-top 54px
 		.b-title-2_other 
 			margin-bottom 28px
-		.b-news-card_other
-			padding-left 21px
-			padding-right 21px
-			&:after
-				bottom 20px
-				border-bottom 1px solid #c8ae97
 		.b-section_narrow
-			margin-bottom -74px
+			margin-bottom -60px
+.js-menu //добавить для b-top-r, b-top-l, .b-nav, и для .b-header - _active-menu b-header-link - _close
+	@media $max_sm
+		.b-mobile-wrapper
+			display block
+			position fixed 
+			top 0
+			left 0
+			bottom 0
+			width 100%
+			overflow auto
+			border-top 1px solid $beige
+			background $black url(../img/cow-2.png) no-repeat
+			background-position center bottom
+			background-size 40%
+			z-index 15
+			text-align center
+			padding 140px 30px 0
+		.b-contact
+			display block
+			.b-button
+				margin-top 36px
+		.b-contact_inline
+			display block
+			padding 0
+			&:last-child
+				padding 0
+		.b-contact__title
+			display block
+			font-size 15px
+			color $light_beige
+			margin-bottom 17px
+			margin-top 37px
+		.b-contact__value
+			font-size 24px
+			font-weight bold
+			display block
+			font-family 'Oswald-Medium'
+		.b-nav__item
+			display block
+			max-width 100%
+			border-bottom 1px solid $beige
+			padding 40px 0
+			&:first-child
+				margin-top -20px
+			&:hover
+				background-color inherit
+				color $light_beige
 .owl-carousel 
 	.owl-item img
 		width 45px
