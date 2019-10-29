@@ -18,6 +18,12 @@ footer
 	@media $max_xs
 		padding-top 60px
 		padding-bottom 60px
+.p-main, 
+.p-news,
+.p-contacts
+	@media $max_sm
+		footer
+			padding-top 75px
 .b-footer
 	display table 
 	table-layout fixed
@@ -263,6 +269,8 @@ footer
 		margin-bottom 18.5%
 	.b-title-1
 		margin-bottom 0
+		@media $max_sm
+			line-height .7
 .b-news
 	colsWrap(3,40,20)
 	margin-bottom 40px
@@ -309,6 +317,7 @@ footer
 			overflow hidden
 			@media $max_sm
 				line-height 1.4
+				max-height 48px
 	&-card__image
 		width 100%
 	&-card_other
@@ -376,6 +385,8 @@ footer
 		padding-top 31px
 .section-news
 	margin-bottom 120px
+	@media $max_sm
+		margin-bottom 80px	
 .p-main .section-news	
 	@media $max_sm 
 		margin-bottom 78px		
@@ -421,7 +432,7 @@ footer
 	padding 27px 22px 42px
 	@media $max_sm 
 		padding-left 0
-		padding-top 15px
+		padding-top 16px
 	@media $max_xs
 		padding-bottom 0
 		padding-left 15px
@@ -1003,7 +1014,7 @@ footer
 			margin-bottom 28px
 		.b-section_narrow
 			margin-bottom -60px
-.js-menu //добавить для b-top-r, b-top-l, .b-nav, и для .b-header - _active-menu b-header-link - _close
+.js-menu //добавить для b-top-r, b-top-l, .b-nav, для .b-header - ._active-menu, b-header-link - ._close
 	@media $max_sm
 		.b-mobile-wrapper
 			display block
