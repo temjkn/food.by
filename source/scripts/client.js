@@ -72,3 +72,21 @@ function MainTriggersCarousel() {
 		};
 	};
 };
+
+$('.b-header-link_navicon').on('click', function(){
+	$('.b-header-link_navicon').toggleClass('b-header-link_close');
+	$('.b-nav').toggleClass('js-menu');
+	$('.b-header-mobile').toggleClass('b-header-mobile_active-menu');
+});
+
+$('.b-header-link_email').on('click', function(){
+	$('.b-header-link_email').toggleClass('b-header-link_close');
+	$('.b-header__top-l').toggleClass('js-menu');
+	$('.b-header-mobile').toggleClass('b-header-mobile_active-menu');
+});
+
+$('.b-header-link_phone').on('click', function(){
+	$('.b-header-link_phone').toggleClass('b-header-link_close');
+	$('.b-header__top-r').toggleClass('js-menu');
+	$('.b-header-mobile').toggleClass('b-header-mobile_active-menu');
+});

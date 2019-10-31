@@ -54,16 +54,6 @@
 				width 100%
 		@media $max_xs
 			width 51px
-	&_active-menu
-		position fixed
-		background $black
-		padding 20px 30px 
-		z-index 99
-		left 0
-		top 0
-		border-bottom 1px solid $beige
-		@media $max_xs
-			padding 20px 15px
 	.b-contact
 		&_inline:last-child
 			padding-left 28px
@@ -116,6 +106,17 @@
 		@media $max_xs
 			margin 76px 0 -150px
 			padding 0 40px 29px
+
+.b-header-mobile_active-menu
+	position fixed
+	background $black
+	padding 20px 30px 
+	z-index 99
+	left 0
+	top 0
+	border-bottom 1px solid $beige
+	@media $max_xs
+		padding 20px 15px
 .b-contact
 	&__title
 		display block
