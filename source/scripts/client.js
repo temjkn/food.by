@@ -73,25 +73,41 @@ function MainTriggersCarousel() {
 	};
 };
 
-$('.b-header-link_navicon').on('click', function(){
-	$('.b-header-link_navicon').toggleClass('b-header-link_close');
+$('body').on('click','.b-header-link_navicon', function (e) {
+	$(this).toggleClass('b-header-link_close');
 	$('.b-nav').toggleClass('js-menu');
 	$('.b-header-mobile').toggleClass('b-header-mobile_active-menu');
+	closeOtherMobileMenu($(this));
 });
 
-$('.b-header-link_email').on('click', function(){
-	$('.b-header-link_email').toggleClass('b-header-link_close');
+$('body').on('click','.b-header-link_email', function (e) {
+	$(this).toggleClass('b-header-link_close');
 	$('.b-header__top-l').toggleClass('js-menu');
 	$('.b-header-mobile').toggleClass('b-header-mobile_active-menu');
+	closeOtherMobileMenu($(this));
 });
 
-$('.b-header-link_phone').on('click', function(){
-	if($('.js-menu') || $('.b-header-link_close')){
-		$('.js-menu').removeClass('js-menu');
-		$('.b-header-link_close').removeClass('b-header-link_close');
-		$('.b-header-mobile').removeClass('b-header-mobile_active-menu');
-	};
-	$('.b-header-link_phone').toggleClass('b-header-link_close');
+$('body').on('click','.b-header-link_phone', function (e) {
+	// if($('.js-menu') || $('.b-header-link_close')){
+	// 	$('.js-menu').removeClass('js-menu');
+	// 	$('.b-header-link_close').removeClass('b-header-link_close');
+	// 	$('.b-header-mobile').removeClass('b-header-mobile_active-menu');
+	// };
+	$(this).toggleClass('b-header-link_close');
 	$('.b-header__top-r').toggleClass('js-menu');
 	$('.b-header-mobile').toggleClass('b-header-mobile_active-menu');
+	closeOtherMobileMenu($(this));
 });
+
+function closeOtherMobileMenu($this) {
+	if($this.hasClass('b-header-link_navicon')){
+		console.log(123);
+		$('.b-header-link_phone').removeClass('b-header-link_close');
+		$('.b-header__top-l').removeClass('js-menu');
+		$('.b-header__top-r').removeClass('js-menu');
+	}else if($this.hasClass('b-header-link_email')){
+		//если открываем мыло
+	}else if($this.hasClass('b-header-link_navicon')){
+		//усли открываем телефон
+	}
+}
