@@ -1101,9 +1101,9 @@ footer
 			background $black url(../img/cow-2.png) no-repeat
 			background-position center bottom
 			background-size 40%
-			z-index 15
+			// z-index 15
 			text-align center
-			padding 140px 30px 0
+			padding 140px 30px 0	
 		.b-contact
 			display block
 			.b-button
@@ -1113,6 +1113,21 @@ footer
 			padding 0
 			&:last-child
 				padding 0
+		.b-contact,
+		.b-nav__item		
+			position relative
+			&:first-child 
+				&:before
+					position absolute
+					top -57px
+					left 0
+					width 100%
+					content ''
+					border-bottom 1px solid $beige
+					z-index 999
+		.js-menu .b-contact_inline:first-child 
+				&:before
+					top -37px
 		.b-contact__title
 			display block
 			font-size 15px
@@ -1133,7 +1148,7 @@ footer
 				margin-top -20px
 			&:hover
 				background-color inherit
-				color $light_beige
+				color $light_beige		
 .owl-carousel 
 	.owl-item 
 		height 143px
