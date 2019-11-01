@@ -73,41 +73,95 @@ function MainTriggersCarousel() {
 	};
 };
 
+// $('body').on('click','.b-header-link_navicon', function (e) {
+// 	$(this).toggleClass('b-header-link_close');
+// 	$('.b-nav').toggleClass('js-menu');
+// 	$('.b-header-mobile').toggleClass('b-header-mobile_active-menu');
+// 	closeOtherMobileMenu($(this));
+// });
+
+// $('body').on('click','.b-header-link_email', function (e) {
+// 	$(this).toggleClass('b-header-link_close');
+// 	$('.b-header__top-l').toggleClass('js-menu');
+// 	$('.b-header-mobile').toggleClass('b-header-mobile_active-menu');
+// 	// closeOtherMobileMenu($(this));
+// });
+
+// $('body').on('click','.b-header-link_phone', function (e) {
+// 	$(this).toggleClass('b-header-link_close');
+// 	$('.b-header__top-r').toggleClass('js-menu');
+// 	$('.b-header-mobile').toggleClass('b-header-mobile_active-menu');
+// 	// closeOtherMobileMenu($(this));
+// });
+
+// function closeOtherMobileMenu($this) {
+// 	if($this.hasClass('b-header-link_navicon')){
+// 		$('.b-header-link_phone').removeClass('b-header-link_close');
+// 		$('.b-header-link_email').removeClass('b-header-link_close');
+// 		$('.b-header__top-l').removeClass('js-menu');
+// 		$('.b-header__top-r').removeClass('js-menu');
+// 	}else if($this.hasClass('b-header-link_email')){
+// 		//если открываем мыло
+// 		$('.b-header-link_navicon').removeClass('b-header-link_close');
+// 		$('.b-header-link_phone').removeClass('b-header-link_close');
+// 		$('.b-nav').removeClass('js-menu');
+// 		$('.b-header__top-r').removeClass('js-menu');
+// 	}else if($this.hasClass('b-header-link_phone')){
+// 		//усли открываем телефон
+// 		$('.b-header-link_navicon').removeClass('b-header-link_close');
+// 		$('.b-header-link_email').removeClass('b-header-link_close');
+// 		$('.b-nav').removeClass('js-menu');
+// 		$('.b-header__top-l').removeClass('js-menu');		
+// 	}
+// }
+
+
 $('body').on('click','.b-header-link_navicon', function (e) {
+	closeOtherMobileMenu($(this));
 	$(this).toggleClass('b-header-link_close');
 	$('.b-nav').toggleClass('js-menu');
 	$('.b-header-mobile').toggleClass('b-header-mobile_active-menu');
-	closeOtherMobileMenu($(this));
 });
-
 $('body').on('click','.b-header-link_email', function (e) {
+	closeOtherMobileMenu($(this));
 	$(this).toggleClass('b-header-link_close');
 	$('.b-header__top-l').toggleClass('js-menu');
 	$('.b-header-mobile').toggleClass('b-header-mobile_active-menu');
-	closeOtherMobileMenu($(this));
 });
-
 $('body').on('click','.b-header-link_phone', function (e) {
-	// if($('.js-menu') || $('.b-header-link_close')){
-	// 	$('.js-menu').removeClass('js-menu');
-	// 	$('.b-header-link_close').removeClass('b-header-link_close');
-	// 	$('.b-header-mobile').removeClass('b-header-mobile_active-menu');
-	// };
+	closeOtherMobileMenu($(this));
 	$(this).toggleClass('b-header-link_close');
 	$('.b-header__top-r').toggleClass('js-menu');
 	$('.b-header-mobile').toggleClass('b-header-mobile_active-menu');
-	closeOtherMobileMenu($(this));
 });
 
+var menuClick = 1;
+function removeHeaderActiveMenu(){
+	menuClick++
+	if(menuClick%2==0){
+		$('.b-header-mobile').removeClass('b-header-mobile_active-menu');
+	}
+}
+
 function closeOtherMobileMenu($this) {
+	$('.b-header-mobile').addClass('b-header-mobile_active-menu');
 	if($this.hasClass('b-header-link_navicon')){
-		console.log(123);
 		$('.b-header-link_phone').removeClass('b-header-link_close');
+		$('.b-header-link_email').removeClass('b-header-link_close');
 		$('.b-header__top-l').removeClass('js-menu');
 		$('.b-header__top-r').removeClass('js-menu');
 	}else if($this.hasClass('b-header-link_email')){
 		//если открываем мыло
-	}else if($this.hasClass('b-header-link_navicon')){
+		$('.b-header-link_navicon').removeClass('b-header-link_close');
+		$('.b-header-link_phone').removeClass('b-header-link_close');
+		$('.b-nav').removeClass('js-menu');
+		$('.b-header__top-r').removeClass('js-menu');
+	}else if($this.hasClass('b-header-link_phone')){
 		//усли открываем телефон
-	}
+		$('.b-header-link_navicon').removeClass('b-header-link_close');
+		$('.b-header-link_email').removeClass('b-header-link_close');
+		$('.b-header__top-l').removeClass('js-menu');
+		$('.b-nav').removeClass('js-menu');
+	};
+	removeHeaderActiveMenu();	
 }
