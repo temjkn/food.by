@@ -44,8 +44,10 @@
 	&__top-r
 		text-align right
 		&.js-menu .b-mobile-wrapper
-			top 120px
+			top 125px
 			padding-top 0
+			@media $max_xs
+				top 100px
 	&__top-c
 		width 89px
 		@media $max_sm
@@ -111,7 +113,7 @@
 	position fixed
 	background $black
 	padding 20px 30px 
-	z-index 99
+	z-index 3
 	left 0
 	top 0
 	@media $max_xs
@@ -174,9 +176,11 @@
 			background $beige
 			color $black
 			text-decoration none	
-	.b-mobile-wrapper
+	.b-mobile-wrapper__menu
 		display flex
 		justify-content center
+		@media $max_sm
+			display block
 	@media $max_sm
 		display none
 	&.js-menu
@@ -248,8 +252,9 @@
 		border-top 2px solid $beige
 		height 21px
 		width 28px
-		@media $max_xs
-			height 18px
+		&.b-header-link_close
+			@media $max_xs
+				height 24px
 		&:after
 			position absolute
 			content ""
@@ -257,7 +262,7 @@
 			border-top 2px solid $beige
 			top 7px
 			@media $max_xs
-				top 6px
+				top 7px
 	&_close
 		background url(../img/close.png) no-repeat
 		border none 
@@ -265,3 +270,6 @@
 			border none 
 		img 
 			display none
+	&_phone img
+		@media $max_xs
+			width 22px

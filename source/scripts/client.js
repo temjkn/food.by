@@ -49,7 +49,7 @@ function SetNewsHeight(){
 function MainTriggersCarousel() {
 
 	var owl = $('.b-header_bottom');
-	if ($( window ).width() < 640){
+	if ($( window ).width() <= 640){
 		if(owlState == false){
 			owl.addClass('owl-carousel');
 				owl.owlCarousel({
@@ -64,7 +64,7 @@ function MainTriggersCarousel() {
 			owlState = true;
 		};
 	};
-	if ($( window ).width() >= 640){
+	if ($( window ).width() > 640){
 		if (owlState == true){
 			owl.removeClass('owl-carousel');
 			owl.trigger('destroy.owl.carousel');
@@ -73,104 +73,56 @@ function MainTriggersCarousel() {
 	};
 };
 
-// $('body').on('click','.b-header-link_navicon', function (e) {
-// 	$(this).toggleClass('b-header-link_close');
-// 	$('.b-nav').toggleClass('js-menu');
-// 	$('.b-header-mobile').toggleClass('b-header-mobile_active-menu');
-// 	closeOtherMobileMenu($(this));
-// });
-
-// $('body').on('click','.b-header-link_email', function (e) {
-// 	$(this).toggleClass('b-header-link_close');
-// 	$('.b-header__top-l').toggleClass('js-menu');
-// 	$('.b-header-mobile').toggleClass('b-header-mobile_active-menu');
-// 	// closeOtherMobileMenu($(this));
-// });
-
-// $('body').on('click','.b-header-link_phone', function (e) {
-// 	$(this).toggleClass('b-header-link_close');
-// 	$('.b-header__top-r').toggleClass('js-menu');
-// 	$('.b-header-mobile').toggleClass('b-header-mobile_active-menu');
-// 	// closeOtherMobileMenu($(this));
-// });
-
-// function closeOtherMobileMenu($this) {
-// 	if($this.hasClass('b-header-link_navicon')){
-// 		$('.b-header-link_phone').removeClass('b-header-link_close');
-// 		$('.b-header-link_email').removeClass('b-header-link_close');
-// 		$('.b-header__top-l').removeClass('js-menu');
-// 		$('.b-header__top-r').removeClass('js-menu');
-// 	}else if($this.hasClass('b-header-link_email')){
-// 		//если открываем мыло
-// 		$('.b-header-link_navicon').removeClass('b-header-link_close');
-// 		$('.b-header-link_phone').removeClass('b-header-link_close');
-// 		$('.b-nav').removeClass('js-menu');
-// 		$('.b-header__top-r').removeClass('js-menu');
-// 	}else if($this.hasClass('b-header-link_phone')){
-// 		//усли открываем телефон
-// 		$('.b-header-link_navicon').removeClass('b-header-link_close');
-// 		$('.b-header-link_email').removeClass('b-header-link_close');
-// 		$('.b-nav').removeClass('js-menu');
-// 		$('.b-header__top-l').removeClass('js-menu');		
-// 	}
-// }
-
-
 $('body').on('click','.b-header-link_navicon', function (e) {
-
 	$(this).toggleClass('b-header-link_close');
 	$('.b-nav').toggleClass('js-menu');
 	$('.b-header-mobile').toggleClass('b-header-mobile_active-menu');
 	closeOtherMobileMenu($(this));
 });
 $('body').on('click','.b-header-link_email', function (e) {
-
 	$(this).toggleClass('b-header-link_close');
 	$('.b-header__top-l').toggleClass('js-menu');
 	$('.b-header-mobile').toggleClass('b-header-mobile_active-menu');
 	closeOtherMobileMenu($(this));
 });
 $('body').on('click','.b-header-link_phone', function (e) {
-
 	$(this).toggleClass('b-header-link_close');
 	$('.b-header__top-r').toggleClass('js-menu');
 	$('.b-header-mobile').toggleClass('b-header-mobile_active-menu');
 	closeOtherMobileMenu($(this));
 });
 
-// var menuClick = 1;
-// function removeHeaderActiveMenu(){
-// 	menuClick++
-// 	if(menuClick%2==0){
-// 		$('.b-header-mobile').removeClass('b-header-mobile_active-menu');
-// 	}
-// }
-
-function closeOtherMobileMenu($this) {
-	if($this.closest('.js-menu').length){
+function checkHeader(tagClass){		
+	if($(tagClass).closest('.js-menu').length){
 		//если активно мобильное меню
 		$('.b-header-mobile').addClass('b-header-mobile_active-menu');
 	}else{
 		//если не активно моб меню
 		$('.b-header-mobile').removeClass('b-header-mobile_active-menu');
 	}
+}
+function closeOtherMobileMenu($this) {
 
 	if($this.hasClass('b-header-link_navicon')){
+		//если открываем меню
 		$('.b-header-link_phone').removeClass('b-header-link_close');
 		$('.b-header-link_email').removeClass('b-header-link_close');
 		$('.b-header__top-l').removeClass('js-menu');
 		$('.b-header__top-r').removeClass('js-menu');
+		checkHeader('.b-nav');
 	}else if($this.hasClass('b-header-link_email')){
 		//если открываем мыло
 		$('.b-header-link_navicon').removeClass('b-header-link_close');
 		$('.b-header-link_phone').removeClass('b-header-link_close');
 		$('.b-nav').removeClass('js-menu');
 		$('.b-header__top-r').removeClass('js-menu');
+		checkHeader('.b-header__top-l');
 	}else if($this.hasClass('b-header-link_phone')){
 		//если открываем телефон
 		$('.b-header-link_navicon').removeClass('b-header-link_close');
 		$('.b-header-link_email').removeClass('b-header-link_close');
 		$('.b-header__top-l').removeClass('js-menu');
 		$('.b-nav').removeClass('js-menu');
+		checkHeader('.b-header__top-r');
 	};
 }
