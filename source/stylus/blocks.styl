@@ -1149,7 +1149,15 @@ footer
 			padding-top 115px
 .b-nav .b-mobile-wrapper__menu
 	&:before
-		top 14px !important
+		position fixed !important
+		top 125px !important
+		margin 0 30px
+		width 94% !important
+		height 10px
+		background $black
+		@media $max_xs
+			width 82% !important
+			top 100px !important
 .b-header__top-l .b-mobile-wrapper__menu
 	&:before
 		top -43px !important
