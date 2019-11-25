@@ -47,22 +47,25 @@
 		&.js-menu .b-mobile-wrapper
 			top 125px
 			padding-top 0
-			@media $max_xs
-				top 100px
 			&.b-mobile-wrapper
 				&:before
-					// top 15px
 					top 0
+			@media $max_xs
+				top 100px
+				&.b-mobile-wrapper
+					&:before
+						// top 15px
+						top 15px
 					
-		// @media $min_md
-		// 	position relative
-		// 	&:after
-		// 		content ''
-		// 		position absolute
-		// 		left 0
-		// 		width 100%
-		// 		border-bottom 1px solid rgba(252, 240, 226, .25)
-		// 		bottom -20px
+		@media $min_md
+			position relative
+			&:after
+				content ''
+				position absolute
+				left 0
+				width 100%
+				border-bottom 1px solid rgba(252, 240, 226, .25)
+				bottom -20px
 	&__top-c
 		// width 89px
 		width 149px
