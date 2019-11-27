@@ -2,13 +2,13 @@
 	width 100%
 	margin-top auto
 	margin-bottom 0
-.footer-wrapper
-	border-top 1px solid $beige
-	margin-top 126px
-	padding-top 74px
-	@media $max_sm
-		margin-top 60px
-		padding-top 57px
+// .footer-wrapper
+// 	border-top 1px solid $beige
+// 	margin-top 126px
+// 	padding-top 74px
+// 	@media $max_sm
+// 		margin-top 60px
+// 		padding-top 57px
 footer 
 	padding-top 74px
 	padding-bottom 120px
@@ -24,10 +24,10 @@ footer
 	@media $max_sm
 		footer
 			padding-top 75px
-.b-footer
+.b-footer 
 	display table 
 	table-layout fixed
-	width 100%
+	width 100%	
 	@media $max_sm
 		display block
 	@media $max_xs
@@ -73,7 +73,17 @@ footer
 	&__contact-row
 		margin-bottom 24px
 		&:last-child
-			margin-bottom 0			
+			margin-bottom 0	
+.p-product,
+.p-about_news,
+.p-text
+	.b-footer
+		border-top 1px solid $beige
+		margin-top 126px
+		padding-top 74px
+		@media $max_sm
+			margin-top 60px
+			padding-top 57px	
 .b-footer-nav
 	@media $max_sm
 		margin 0 -15px
