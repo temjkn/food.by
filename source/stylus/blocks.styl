@@ -11,12 +11,6 @@ footer
 	@media $max_xs
 		padding-top 60px
 		padding-bottom 60px
-.p-main, 
-.p-news,
-.p-contacts
-	@media $max_sm
-		footer
-			padding-top 75px
 .b-footer 
 	display table 
 	table-layout fixed
@@ -41,8 +35,8 @@ footer
 			@media $max_sm
 				display block
 				width 100%
-				border-top 1px solid $beige
-				border-bottom 1px solid $beige
+				border-top 1px solid rgba(252, 240, 226,.2)
+				border-bottom 1px solid rgba(252, 240, 226,.2)
 				padding 55px 0
 				margin-bottom 57px
 			@media $max_xs
@@ -66,7 +60,13 @@ footer
 	&__contact-row
 		margin-bottom 24px
 		&:last-child
-			margin-bottom 0	
+			margin-bottom 0				
+.p-main, 
+.p-news,
+.p-contacts
+	@media $max_sm
+		footer
+			padding-top 75px
 .p-product,
 .p-about_news,
 .p-text
@@ -282,6 +282,7 @@ footer
 	@media $max_sm
 		colsWrap(2,40,20)
 	@media $max_xs
+		margin 0 -15px
 		colsWrap(1,0,0)
 	&__col
 		@media $max_sm 
@@ -294,9 +295,9 @@ footer
 					border-color #f9f7f3
 		@media $max_xs
 			padding 20px 15px
-	&__cols-wrap
-		width 100%
-		margin -10px 0px
+	// &__cols-wrap
+	// 	width 100%
+	// 	margin -10px 0px
 	&__title
 		margin 30px 31px 0 18px
 	&-card
@@ -312,6 +313,8 @@ footer
 			border-bottom 1px solid $brown
 			@media $max_sm
 				bottom 0
+			@media $max_xs
+				border-bottom none
 		&_no-border
 			&:after
 				border-bottom none
@@ -333,7 +336,7 @@ footer
 		img
 			width 100%
 			@media $max_sm
-				max-width 423px
+				// max-width 423px
 				margin 0 auto
 	&-card_other
 		width 50%
@@ -366,6 +369,7 @@ footer
 		&__col
 			width 50%
 			@media $max_xs
+				padding 20px 0
 				width 100%
 		&-card:after
 			display none
@@ -497,7 +501,7 @@ footer
 		padding-left 0
 		padding-top 16px
 	@media $max_xs
-		padding-bottom 50px
+		padding-bottom 0
 		padding-left 15px
 		padding-right 15px
 	&_center
@@ -1113,13 +1117,13 @@ footer
 		.b-other-news 
 			margin-top 62px
 			padding-top 54px
-		.b-title-2_other 
-			margin-bottom 28px
 		.b-section_narrow
 			margin-bottom -60px
 	@media $max_xs	
 		.b-title-inner	
 			min-height 235px
+		.b-section
+			padding 34px 14px 16px
 
 	
 			
