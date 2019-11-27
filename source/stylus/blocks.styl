@@ -285,8 +285,6 @@ footer
 		colsWrap(1,0,0)
 	&__col
 		@media $max_sm 
-			// width 100%
-			// padding 10px 0
 			margin-bottom 18px
 		&:last-child
 			.b-news-card
@@ -295,7 +293,6 @@ footer
 					pointer-events none
 					border-color #f9f7f3
 		@media $max_xs
-			// width 50%
 			padding 20px 15px
 	&__cols-wrap
 		width 100%
@@ -329,13 +326,14 @@ footer
 				max-height 48px
 			@media $max_xs
 				margin-bottom 28px
+				max-height 50px
+				line-height 1.5
 	&-card__image
-		width 100%
 		display block
 		img
 			width 100%
-			@media $max_xs
-				max-width 100% 
+			@media $max_sm
+				max-width 423px
 				margin 0 auto
 	&-card_other
 		width 50%
@@ -355,13 +353,23 @@ footer
 				padding-left 0
 				padding-right 0
 				padding-top 18px
-				.b-title-4
-					margin-bottom 7px
+				// .b-title-4
+				// 	margin-bottom 7px
 	&-mobile-wrapper
 		@media $max_sm
 			margin 0 -30px 0 -15px
 		@media $max_xs
-			margin 0
+			margin 0	
+.b-news_other 
+	margin-bottom 0
+	.b-news
+		&__col
+			width 50%
+			@media $max_xs
+				width 100%
+		&-card:after
+			display none
+
 .l-container-decoration
 	position relative
 	&:after
@@ -540,6 +548,10 @@ footer
 		flex 1 0 20px
 	&:after
 		margin 0 0 0 30px
+	@media $max_xs
+		&:after, 
+		&:before
+			display none
 	&__page
 		display inline-block
 		width 40px
@@ -562,6 +574,11 @@ footer
 		&_hidden
 			border solid 1px $brown
 			opacity .7
+			@media $working_hover
+				&:hover 
+					border solid 1px $brown
+					background #ffffff
+					color #242e34
 .b-substrate
 	margin -193px 0 -40px
 	background #ede2d9
@@ -1076,7 +1093,6 @@ footer
 			padding-top 0
 		.b-title-inner
 			overflow hidden
-			min-height 305px
 			margin-top 0
 			padding-top 31px
 		.b-substrate__image
@@ -1101,6 +1117,9 @@ footer
 			margin-bottom 28px
 		.b-section_narrow
 			margin-bottom -60px
+	@media $max_xs	
+		.b-title-inner	
+			min-height 235px
 
 	
 			
