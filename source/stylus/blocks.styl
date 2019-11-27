@@ -279,10 +279,14 @@ footer
 .b-news
 	colsWrap(3,40,20)
 	margin-bottom 40px
+	@media $max_sm
+		colsWrap(2,40,20)
+	@media $max_xs
+		colsWrap(1,0,0)
 	&__col
 		@media $max_sm 
-			width 100%
-			padding 10px 0
+			// width 100%
+			// padding 10px 0
 			margin-bottom 18px
 		&:last-child
 			.b-news-card
@@ -291,7 +295,7 @@ footer
 					pointer-events none
 					border-color #f9f7f3
 		@media $max_xs
-			width 339px
+			// width 50%
 			padding 20px 15px
 	&__cols-wrap
 		width 100%
@@ -327,6 +331,12 @@ footer
 				margin-bottom 28px
 	&-card__image
 		width 100%
+		display block
+		img
+			width 100%
+			@media $max_xs
+				max-width 100% 
+				margin 0 auto
 	&-card_other
 		width 50%
 		padding 0 20px
@@ -479,7 +489,7 @@ footer
 		padding-left 0
 		padding-top 16px
 	@media $max_xs
-		padding-bottom 0
+		padding-bottom 50px
 		padding-left 15px
 		padding-right 15px
 	&_center
