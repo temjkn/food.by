@@ -506,6 +506,7 @@ footer
 		padding-right 15px
 	&_center
 		text-align center
+		margin 0 auto
 	&__title
 		text-transform uppercase
 		overflow hidden
@@ -1034,6 +1035,15 @@ footer
 		background-size cover
 		padding 225px 0 180px
 		background-position right -200px center
+		position relative
+		&:before
+			position absolute 
+			left 0
+			right 0
+			top 0
+			bottom 0
+			background rgba(0, 0, 0,.4)
+			content '' 
 		@media $min_1500
 			background-position right center
 		@media $max_sm
