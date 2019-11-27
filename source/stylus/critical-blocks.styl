@@ -6,7 +6,8 @@
 	width 100%
 	margin 0 auto
 	position relative
-	padding 0 10px
+	// padding 0 10px
+	padding 0 25px
 	@media $max_sm
 		padding 0 30px
 	@media $max_xs
@@ -40,17 +41,39 @@
 		display table-cell
 		vertical-align middle
 		position relative
-		z-index 16	
+		z-index 16
 	&__top-r
 		text-align right
 		&.js-menu .b-mobile-wrapper
 			top 125px
 			padding-top 0
+			&.b-mobile-wrapper
+				&:before
+					top 0
 			@media $max_xs
 				top 100px
+				&.b-mobile-wrapper
+					&:before
+						// top 15px
+						top 15px
+					
+		@media $min_md
+			position relative
+			&:after
+				content ''
+				position absolute
+				left 0
+				width 100%
+				border-bottom 1px solid rgba(252, 240, 226, .25)
+				bottom -20px
 	&__top-c
-		width 89px
+		// width 89px
+		width 149px
+		padding-left 30px
+		padding-right 30px
 		@media $max_sm
+			padding-left 0
+			padding-right 0
 			width 63px
 			img 
 				width 100%
@@ -59,6 +82,16 @@
 	.b-contact
 		&_inline:last-child
 			padding-left 28px
+	&__top-l
+		@media $min_md
+			position relative
+			&:after
+				content ''
+				position absolute
+				left 0
+				width 100%
+				border-bottom 1px solid rgba(252, 240, 226, .25)		
+				bottom -20px
 	&_center
 		width 800px
 		height 442px
@@ -117,7 +150,7 @@
 	left 0
 	top 0
 	@media $max_xs
-		padding 20px 15px	
+		padding 20px 15px
 .b-contact
 	&__title
 		display block
@@ -157,7 +190,8 @@
 .b-nav
 	position relative
 	text-align center
-	border-bottom 1px solid $beige
+	// border-bottom 1px solid $beige
+	border-bottom 1px solid rgba(252, 240, 226, .25)
 	&__item
 		display inline-block
 		text-transform uppercase
@@ -169,13 +203,15 @@
 		font-size 15px
 		font-weight 500
 		white-space nowrap
+		text-decoration none
 		&_active
 			background $beige
 			color $black
 		&:hover
-			background $beige
-			color $black
-			text-decoration none	
+			@media $working_hover
+				background $beige
+				color $black
+				text-decoration none
 	.b-mobile-wrapper__menu
 		display flex
 		justify-content center

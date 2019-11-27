@@ -1098,7 +1098,30 @@ footer
 			margin-bottom 28px
 		.b-section_narrow
 			margin-bottom -60px
+
+	
+			
+
 .js-menu //добавить для b-top-r, b-top-l, .b-nav, для .b-header - ._active-menu, b-header-link - ._close
+	.b-mobile-wrapper
+		@media $max_sm
+			// padding 140px 30px 0
+			padding 125px 30px 0
+			&:before
+				content ''
+				position absolute
+				// top 140px
+				top 125px
+				left 30px
+				right 30px
+				height 1px
+				background-color rgba(252, 240, 226, .15)			
+		@media $max_xs
+			padding 140px 15px 0
+			&:before
+				top 115px
+				left 15px
+				right 15px
 	@media $max_sm
 		.b-mobile-wrapper
 			display block
@@ -1110,10 +1133,10 @@ footer
 			overflow auto
 			background $black url(../img/cow-2.png) no-repeat
 			background-position center bottom
-			background-size 40%
+			// background-size 40%
+			background-size 620px
 			z-index 2
 			text-align center
-			padding 140px 30px 0	
 		.b-contact
 			display block
 			.b-button
@@ -1123,22 +1146,24 @@ footer
 			padding 0
 			&:last-child
 				padding 0
-		.b-mobile-wrapper__menu		
-			position relative
-			&:before
-				position absolute
-				top -28px
-				left 0
-				width 100%
-				content ''
-				border-bottom 1px solid $beige
-				z-index 999
+		// .b-mobile-wrapper__menu
+		// 	position relative
+		// 	&:before
+		// 		position absolute
+		// 		top -28px
+		// 		left 0
+		// 		width 100%
+		// 		content ''
+		// 		// border-bottom 1px solid $beige
+		// 		border-bottom 1px solid rgba(252, 240, 226, .15)
+		// 		z-index 999
 		.b-contact__title
 			display block
 			font-size 15px
 			color $light_beige
 			margin-bottom 17px
-			margin-top 37px
+			// margin-top 37px
+			margin-top 54px
 		.b-contact__value
 			font-size 24px
 			font-weight bold
@@ -1147,30 +1172,32 @@ footer
 		.b-nav__item
 			display block
 			max-width 100%
-			border-bottom 1px solid $beige
+			border-bottom 1px solid rgba(252, 240, 226, .15)
 			padding 40px 0
-			&:first-child
-				margin-top -20px
-			&:hover
-				background-color inherit
-				color $light_beige
+			// &:first-child
+			// 	margin-top -20px
+			@media $working_hover
+				&:hover
+					background-color inherit
+					color $light_beige
 	@media $max_xs
 		.b-mobile-wrapper	
 			padding-top 115px
-.b-nav .b-mobile-wrapper__menu
-	&:before
-		position fixed !important
-		top 125px !important
-		margin 0 30px
-		width 94% !important
-		height 10px
-		background $black
-		@media $max_xs
-			width 82% !important
-			top 100px !important
-.b-header__top-l .b-mobile-wrapper__menu
-	&:before
-		top -43px !important
+			background-size 90%
+// .b-nav .b-mobile-wrapper__menu
+// 	&:before
+// 		position fixed !important
+// 		top 125px !important
+// 		margin 0 30px
+// 		width 94% !important
+// 		height 10px
+// 		background $black
+// 		@media $max_xs
+// 			width 82% !important
+// 			top 100px !important
+// .b-header__top-l .b-mobile-wrapper__menu
+// 	&:before
+// 		top -43px !important
 .owl-carousel 
 	.owl-item 
 		height 143px
