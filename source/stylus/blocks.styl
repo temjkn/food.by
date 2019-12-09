@@ -240,11 +240,6 @@ footer
 	@media $max_sm
 		margin-bottom 51px
 		flex-wrap wrap
-		&:before
-			top 0
-			@media $max_sm
-				background-size 70%
-				background-position right
 	&:before
 		position absolute
 		top 8px
@@ -254,9 +249,13 @@ footer
 		width 510px
 		background url(../img/knifes.png) no-repeat
 		opacity 0.4
+		@media $max_sm
+			top 0
+			background-size 70%
+			background-position right
 		@media $max_xs
 			width 100%	
-			background-size 100%
+			background-size 85%
 	&__text
 		max-width 979px
 	&__title
@@ -278,16 +277,12 @@ footer
 		@media $max_sm
 			line-height .7
 .b-news
-	colsWrap(3,40,20)
+	colsWrap(3,40,40)
 	margin-bottom 40px
 	@media $max_sm
-		colsWrap(2,40,20)
+		colsWrap(1,60,40)
 	@media $max_xs
-		margin 0 -15px
-		colsWrap(1,0,0)
-	&__col
-		@media $max_sm 
-			margin-bottom 18px
+		colsWrap(1,0,40)
 		&:last-child
 			.b-news-card
 				&:after
@@ -295,10 +290,8 @@ footer
 					pointer-events none
 					border-color #f9f7f3
 		@media $max_xs
-			padding 20px 15px
-	// &__cols-wrap
-	// 	width 100%
-	// 	margin -10px 0px
+			padding 20px 0
+			margin 0 -15px
 	&__title
 		margin 30px 31px 0 18px
 	&-card
@@ -309,7 +302,7 @@ footer
 			content ''
 			position absolute
 			right 0
-			bottom 20px 
+			bottom 0 
 			left 0
 			border-bottom 1px solid $brown
 			@media $max_sm
@@ -326,11 +319,9 @@ footer
 			max-height 87px
 			overflow hidden
 			@media $max_sm
+				margin-bottom 0
 				line-height 1.4
-				max-height 48px
 			@media $max_xs
-				margin-bottom 28px
-				max-height 50px
 				line-height 1.5
 	&-card__image
 		display block
@@ -357,8 +348,6 @@ footer
 				padding-left 0
 				padding-right 0
 				padding-top 18px
-				// .b-title-4
-				// 	margin-bottom 7px
 	&-mobile-wrapper
 		@media $max_sm
 			margin 0 -30px 0 -15px
@@ -369,6 +358,8 @@ footer
 	.b-news
 		&__col
 			width 50%
+			@media $max_sm
+				width 100%
 			@media $max_xs
 				padding 20px 0
 				width 100%
@@ -431,8 +422,20 @@ footer
 		@media $max_sm 
 			margin-bottom 78px		
 			margin-top 43px	
+			.b-news
+				&__cols-wrap
+					display flex
+					flex-wrap nowrap
+					overflow-x auto
+					scrollbar-width none
+					-ms-overflow-style none
+				&-card
+					min-width 338px
+					&:after
+						content none
 		@media $max_xs
 			margin-top  24px	
+			position relative
 			.b-title-1			
 				line-height .7
 			.b-news
@@ -456,8 +459,6 @@ footer
 				padding-top 20px
 				&__description
 					margin-bottom 33px
-		@media $max_xs
-			position relative
 			.b-news
 				margin 0 -15px
 				&__cols-wrap
@@ -486,8 +487,6 @@ footer
 			&:before
 				right 50%
 				transform translateX(50%)
-				@media $max_xs
-					top 60px
 			.b-button
 				margin-bottom 8px
 				@media $max_sm
@@ -509,11 +508,17 @@ footer
 		text-align center
 		margin 0 auto
 	&__title
+		display block
 		text-transform uppercase
 		overflow hidden
-		max-height 90px
+		height 90px
 		line-height 1.5
 		margin-bottom 11px
+		@media $max_sm
+			height auto
+			margin-bottom 0
+		@media $max_xs
+			margin-bottom 19px
 	&__description
 		max-height 78px
 		overflow hidden
@@ -626,14 +631,14 @@ footer
 .b-contacts
 	margin-bottom 37px
 	@media $max_xs
-		margin-bottom 0
-.maps 
-	height toVw(710)
+		margin-bottom 0		
+.maps
+	height 710px
 	@media $max_sm
-		height toVw(793)
+		height 793px
 	@media $max_xs
 		width 100%
-		height toVw(362)
+		height 362px
 .b-contacts-wrapper
 	position absolute
 	top 0
@@ -652,12 +657,19 @@ footer
 		margin-bottom 10px
 .b-frame-wrapper
 	position absolute
-	top toVw(80)
+	top 50%
+	transform translateY(-50%)
 	left toVw(290)
 	@media $max_sm 
-		margin 0 10px
+		margin 0 30px
+		top -50px
+		left 0
+		transform none 
 	@media $max_xs
-		margin 0 -5px
+		top 0
+		margin 0 10px
+		position relative
+		order -1
 .b-frame
 	width 545px
 	background $white
@@ -938,16 +950,8 @@ footer
 		@media $max_xs
 			margin-bottom 31px
 	&__text
-		display block
-		p
-			margin-bottom 26px
-			&:last-child
-				margin-bottom 72px
-	&__text_last
-		@media $max_sm
-			margin-bottom 57px
-		@media $max_xs
-			margin-bottom 18px
+		margin-bottom toVw(77)
+		font-family 'PT_Root_UI_Regular'
 .b-fresh-meat
 	overflow hidden
 	padding 100px 0 110px
@@ -1108,7 +1112,7 @@ footer
 					@media $max_sm
 						padding-top 189px
 						margin-top -39px
-.p-about_news 
+.p-about_news
 	.b-news-wrapper
 		padding-top 60px
 		@media $max_sm
@@ -1133,8 +1137,6 @@ footer
 			margin-bottom 28px
 		.b-title-3
 			margin 27px 0
-		.b-title-4
-			margin-bottom 27px
 		.b-other-news 
 			margin-top 62px
 			padding-top 54px
