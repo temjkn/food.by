@@ -261,6 +261,7 @@ footer
 		max-width 979px
 	&__title
 		z-index 1
+		margin-right toVw(40)
 		@media $max_sm
 			margin-bottom 57px
 		@media $max_xs
@@ -586,7 +587,9 @@ footer
 					color #242e34
 .b-substrate
 	margin -193px 0 -40px
-	background #ede2d9 url(https://via.placeholder.com/1350x600)
+	background-color #ede2d9 
+	background-image url(https://via.placeholder.com/1350x600)
+	background-position center
 	background-size cover
 	height 600px
 	@media $max_sm
@@ -625,12 +628,12 @@ footer
 	@media $max_xs
 		margin-bottom 0
 .maps 
-	height 710px
+	height toVw(710)
 	@media $max_sm
-		height 793px
+		height toVw(793)
 	@media $max_xs
 		width 100%
-		height 362px
+		height toVw(362)
 .b-contacts-wrapper
 	position absolute
 	top 0
@@ -648,6 +651,9 @@ footer
 		order -1
 		margin-bottom 10px
 .b-frame-wrapper
+	position absolute
+	top toVw(80)
+	left toVw(290)
 	@media $max_sm 
 		margin 0 10px
 	@media $max_xs

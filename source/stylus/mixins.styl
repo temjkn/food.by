@@ -28,7 +28,9 @@ $min_1500 = '(min-width 1501px)'
 
 $working_hover = '(hover) , (min-width:0\0) , (min--moz-device-pixel-ratio:0)'
 
-
+toVw(value)
+    return round( (value/1910) * 100vw, 2)
+    
 font-size(value, r = true)
     font-size value px
     if r
