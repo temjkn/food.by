@@ -13,7 +13,7 @@
 	@media $max_xs
 		padding 0 15px
 .l-header
-	padding-bottom 30px
+	// padding-bottom 30px
 	background-position center
 	background-repeat no-repeat
 	background-size cover
@@ -29,7 +29,14 @@
 .l-header,footer
 	background-color $black
 	color $beige
-
+.b-header-wrap
+	position relative
+	padding-bottom toVw(60)
+	display flex 
+	flex-direction column
+	justify-content space-between
+	height 100vh
+	min-height 600px
 .b-header
 	display table
 	table-layout fixed
@@ -67,10 +74,8 @@
 				border-bottom 1px solid rgba(252, 240, 226, .25)
 				bottom -20px
 	&__top-c
-		// width 89px
-		width 149px
-		padding-left 30px
-		padding-right 30px
+		width toVw(149)
+		padding 0 toVw(30)
 		@media $max_sm
 			padding-left 0
 			padding-right 0
@@ -92,20 +97,23 @@
 				width 100%
 				border-bottom 1px solid rgba(252, 240, 226, .25)		
 				bottom -20px
+	&_top
+		@media $max_sm
+			padding 0
 	&_center
 		width 800px
-		height 442px
-		margin 80px auto 39px
+		height toVw(442)
+		margin 0 auto
 		text-align center
-		background url(../img/cow-2.png) no-repeat
-		padding-top 79px
+		background-image url(../img/cow-2.png) 
+		background-repeat no-repeat
+		background-size contain
+		background-position center
+		padding-top toVw(79)
 		@media $max_sm
 			width 100%
-			padding-top 135px
-			background-size 100%
-			background-position center
+			margin auto
 		@media $max_xs
-			margin-top 10px
 			margin-bottom 0
 			padding-top 66px
 			height 364px
@@ -132,16 +140,15 @@
 			margin-bottom 24px
 	&_bottom
 		background $black
-		margin-bottom 30px
+		padding toVw(20) 0
 		@media $max_sm
+			position absolute
+			bottom -212px
 			display block
 			width auto
-			margin 100px 0 -218px
 			padding 10px 40px
 		@media $max_xs
-			margin 76px 0 -150px
-			padding 0 40px 29px
-
+			bottom -80px
 .b-header-mobile_active-menu
 	position fixed
 	background $black
@@ -159,11 +166,13 @@
 		margin-bottom 4px	
 	&__value
 		text-transform uppercase
-		font-size 17px
+		font-size 15px
 		font-weight bold
 		display inline-block
 		@media $max_xs
 			font-size 15px
+		@media $min_1500
+			font-size 17px
 		&_email
 			color $green
 		&:nth-child(2)
@@ -196,7 +205,7 @@
 	&__item
 		display inline-block
 		text-transform uppercase
-		padding 21px 20px
+		padding toVw(21) toVw(20)
 		max-width 215px
 		flex-grow 1
 		margin 0
@@ -205,14 +214,15 @@
 		font-weight 500
 		white-space nowrap
 		text-decoration none
-		&_active
-			background $beige
-			color $black
-		&:hover
-			@media $working_hover
+		transition .25s background, .25s color, .25s text-decoration
+		@media $working_hover
+			&:hover
 				background $beige
 				color $black
 				text-decoration none
+		&_active
+			background $beige
+			color $black
 	.b-mobile-wrapper__menu
 		display flex
 		justify-content center
@@ -226,7 +236,7 @@
 	display inline-block
 	width 33%
 	border-left 1px solid #40484b
-	padding 20px 0 15px 40px
+	padding toVw(20) 0 toVw(15) toVw(40)
 	@media $max_sm
 		text-align center
 		width 100%
@@ -266,6 +276,8 @@
 			margin-left 0
 .b-logo	
 	position relative
+	img 
+		width 100%
 .b-header-link
 	width 25px
 	height 25px
